@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_NAME "shikilib")
 set(CMAKE_CXX_STANDARD 20)
@@ -35,6 +35,7 @@ add_executable(${PROJECT_NAME}
     src/main.cpp
     src/parser/parser.cpp
     src/networker/networker.cpp
+    src/utils/utils.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE 
