@@ -8,21 +8,11 @@
 
 class Parser
 {
-private:
-
-    std::string file_name    {};
-    std::string file_content {};
-    bool parse = true;
-
 public:
-    void OpenFile();
-    void SaveFile(std::vector<nlohmann::json> data, std::string file_name);
-    void ParseAnimelib(const nlohmann::json& j, std::vector<anime_animelib>& anime);
-    void ParseShikimori(const nlohmann::json& j, anime_shikimori& anime);
+    static nlohmann::json ReadFile(const std::string& file_name);
+    static void           SaveFile(const std::string& file_name, const nlohmann::json& j);
 
-
-    std::vector<anime_merged> MergeLibs(const nlohmann::json& animelib, const nlohmann::json& shiki);
-    std::vector<anime_shikimori> ShikiToStruct();
+    static nlohmann::json MergeLists(const nlohmann::json& animelib_json, const nlohmann::json& shikimori_json);
 };
 
 #endif //!__PARSER_H__
