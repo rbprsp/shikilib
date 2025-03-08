@@ -1,12 +1,8 @@
 #include <iostream>
-#include <conio.h>
 #include <curl/curl.h>
-#include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
 
 #include "networker.h"
-#include "parser/parser.h"
-#include "utils/utils.h"
 
 size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* out) 
 {
@@ -139,40 +135,30 @@ void Networker::AddToAnimeLibFromJson(const nlohmann::json& document)
         int status_anilib = 0;
         std::string media_type;
 
-        // Extract slug_url (будет использовано как media_slug)
-        if (item.contains("info") && item["info"].contains("slug_url") && item["info"]["slug_url"].is_string()) 
-        {
+        if (item.contains("info") && item["info"].contains("slug_url") && item["info"]["slug_url"].is_string())
             slug_url = item["info"]["slug_url"].get<std::string>();
-        } 
         else 
         {
             spdlog::warn("Missing or invalid slug_url in object");
             continue;
         }
 
-        // Extract status_anilib
         if (item.contains("bookmark") && item["bookmark"].contains("status_anilib") && item["bookmark"]["status_anilib"].is_number_integer()) 
-        {
             status_anilib = item["bookmark"]["status_anilib"].get<int>();
-        } 
         else 
         {
             spdlog::warn("Missing or invalid status_anilib in object with slug_url: {}", slug_url);
             continue;
         }
 
-        // Extract model (будет использовано как media_type)
         if (item.contains("info") && item["info"].contains("model") && item["info"]["model"].is_string()) 
-        {
             media_type = item["info"]["model"].get<std::string>();
-        } 
         else 
         {
-            media_type = "anime"; // По умолчанию "anime", если model отсутствует
+            media_type = "anime";
             spdlog::debug("No model found for slug_url: {}, using default media_type: anime", slug_url);
         }
 
-        // Form request body in the exact format
         nlohmann::json request_body = {
             {"media_type", media_type},
             {"media_slug", slug_url},
@@ -205,7 +191,7 @@ void Networker::AddtoAnimeLib(const std::string& body)
 
         struct curl_slist* headers = nullptr;
         headers = curl_slist_append(headers, "Host: api2.mangalib.me");
-        headers = curl_slist_append(headers, "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0");
+        headers = curl_slist_append(headers, "User-Agent: shikilib");
         headers = curl_slist_append(headers, "Accept: */*");
         headers = curl_slist_append(headers, "Accept-Language: en-US,en;q=0.5");
         headers = curl_slist_append(headers, "Accept-Encoding: gzip, deflate, br, zstd");

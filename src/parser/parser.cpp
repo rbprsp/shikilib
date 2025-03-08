@@ -3,7 +3,6 @@
 #include <spdlog/spdlog.h>
 
 #include "parser.h"
-#include "data/structs.h"
 
 #ifdef __linux__
     //TODO:
@@ -76,10 +75,6 @@ void SaveNotFound(const nlohmann::json& not_found)
     }
 }
 
-/// @brief using two json files to merge it
-/// @param animelib animelib json data
-/// @param shiki shikomori json data
-/// @returns returns merged json list with your anime from shikimori
 nlohmann::json Parser::MergeLists(const nlohmann::json& animelib_json, const nlohmann::json& shikimori_json)
 {
     nlohmann::json result = nlohmann::json::array();
