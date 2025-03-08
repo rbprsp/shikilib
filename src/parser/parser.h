@@ -2,9 +2,8 @@
 #define __PARSER_H__
 
 #include <string>
-#include <nlohmann/json.hpp>
 
-#include "data/structs.h"
+#include <nlohmann/json.hpp>
 
 class Parser
 {
