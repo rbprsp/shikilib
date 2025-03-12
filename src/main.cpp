@@ -15,8 +15,18 @@ int main()
 #ifdef _WIN32
     system("chcp 65001 >nul");
 #endif
+    Networker n;
+    std::string input;
+    std::getline(std::cin, input);
+
+    std::cout << input << std::endl;
+    std::getline(std::cin, input);
+    n.SetToken(input);
+
+    json fetched = n.FetchAnimeLib();
 
     Parser p;
+    p.SaveFile("anilib.json", fetched);
     json anilib = p.ReadFile("anilib.json");
     json shiki  = p.ReadFile("shiki.json");
     json merged = p.Merge(anilib["data"], shiki);
