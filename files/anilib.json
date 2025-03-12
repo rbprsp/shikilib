@@ -1,0 +1,3018 @@
+{
+    "data": [
+      {
+        "id": 17984,
+        "name": "Chainsaw Man",
+        "rus_name": "Человек-бензопила",
+        "eng_name": "Chainsaw Man",
+        "slug": "chainsaw-man-anime",
+        "slug_url": "17984--chainsaw-man-anime",
+        "cover": {
+          "filename": "4d3b2a31-0819-427b-bb4b-1669b7992b94",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/17984/cover/4d3b2a31-0819-427b-bb4b-1669b7992b94_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/17984/cover/4d3b2a31-0819-427b-bb4b-1669b7992b94.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/17984/cover/4d3b2a31-0819-427b-bb4b-1669b7992b94.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.15",
+          "averageFormated": "9.2",
+          "votes": 7280,
+          "votesFormated": "7.3 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657305,
+          "type": "anime_bookmark",
+          "media_id": 17984,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:41",
+          "updated_at": "2023-01-15T17:00:41.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 16133,
+        "name": "Jujutsu Kaisen",
+        "rus_name": "Магическая битва",
+        "eng_name": "Jujutsu Kaisen",
+        "slug": "jujutsu-kaisen-anime",
+        "slug_url": "16133--jujutsu-kaisen-anime",
+        "cover": {
+          "filename": "903cef36-9e3e-43b8-aced-7a668da88956",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/16133/cover/903cef36-9e3e-43b8-aced-7a668da88956_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/16133/cover/903cef36-9e3e-43b8-aced-7a668da88956.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/16133/cover/903cef36-9e3e-43b8-aced-7a668da88956.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.05",
+          "averageFormated": "9.1",
+          "votes": 6353,
+          "votesFormated": "6.4 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657272,
+          "type": "anime_bookmark",
+          "media_id": 16133,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:40",
+          "updated_at": "2023-01-15T17:00:40.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 22061,
+        "name": "Kusuriya no Hitorigoto",
+        "rus_name": "Монолог фармацевта",
+        "eng_name": "The Apothecary Diaries",
+        "slug": "kusuriya-no-hitorigoto-anime",
+        "slug_url": "22061--kusuriya-no-hitorigoto-anime",
+        "cover": {
+          "filename": "ef6bdd16-ea25-4eb1-ae2d-8cd17e1e90cb",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/22061/cover/ef6bdd16-ea25-4eb1-ae2d-8cd17e1e90cb_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/22061/cover/ef6bdd16-ea25-4eb1-ae2d-8cd17e1e90cb.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/22061/cover/ef6bdd16-ea25-4eb1-ae2d-8cd17e1e90cb.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.59",
+          "averageFormated": "9.6",
+          "votes": 5842,
+          "votesFormated": "5.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 7810824,
+          "type": "anime_bookmark",
+          "media_id": 22061,
+          "item_id": 115799,
+          "progress": "19:28",
+          "status": 22,
+          "created_at": "2024-01-13 05:25:23",
+          "updated_at": "2024-06-24T12:43:36.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": 0,
+            "item_number": 6,
+            "player": "Animelib",
+            "team": 32435,
+            "translation_type": 2
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 20591,
+        "name": "Ore dake Level Up na Ken",
+        "rus_name": "Поднятие уровня в одиночку",
+        "eng_name": "Solo Leveling",
+        "slug": "ore-dake-level-up-na-ken-anime",
+        "slug_url": "20591--ore-dake-level-up-na-ken-anime",
+        "cover": {
+          "filename": "d6770138-3c03-4e77-9029-4df8b5455dc5",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/20591/cover/d6770138-3c03-4e77-9029-4df8b5455dc5_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/20591/cover/d6770138-3c03-4e77-9029-4df8b5455dc5.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/20591/cover/d6770138-3c03-4e77-9029-4df8b5455dc5.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.14",
+          "averageFormated": "9.1",
+          "votes": 6793,
+          "votesFormated": "6.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 3312934,
+          "type": "anime_bookmark",
+          "media_id": 20591,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-02-15 21:31:22",
+          "updated_at": "2024-04-12T18:04:33.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 1357,
+        "name": "Death Note",
+        "rus_name": "Тетрадь смерти",
+        "eng_name": "Death Note",
+        "slug": "death-note-anime",
+        "slug_url": "1357--death-note-anime",
+        "cover": {
+          "filename": "96e9f90c-a6f9-4623-b702-548700691b05",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/1357/cover/96e9f90c-a6f9-4623-b702-548700691b05_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/1357/cover/96e9f90c-a6f9-4623-b702-548700691b05.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/1357/cover/96e9f90c-a6f9-4623-b702-548700691b05.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.22",
+          "averageFormated": "9.2",
+          "votes": 5457,
+          "votesFormated": "5.5 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657026,
+          "type": "anime_bookmark",
+          "media_id": 1357,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:36",
+          "updated_at": "2023-01-15T17:00:36.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 405,
+        "name": "Howl no Ugoku Shiro",
+        "rus_name": "Ходячий замок",
+        "eng_name": "Howl's Moving Castle",
+        "slug": "howl-no-ugoku-shiro-anime",
+        "slug_url": "405--howl-no-ugoku-shiro-anime",
+        "cover": {
+          "filename": "19231885-a67b-47dc-9300-b25382fd4a05",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/405/cover/19231885-a67b-47dc-9300-b25382fd4a05_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/405/cover/19231885-a67b-47dc-9300-b25382fd4a05.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/405/cover/19231885-a67b-47dc-9300-b25382fd4a05.jpg"
+        },
+        "ageRestriction": {
+          "id": 0,
+          "label": "Нет"
+        },
+        "site": 5,
+        "type": {
+          "id": 17,
+          "label": "Фильм"
+        },
+        "rating": {
+          "average": "9.59",
+          "averageFormated": "9.6",
+          "votes": 4281,
+          "votesFormated": "4.3 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657014,
+          "type": "anime_bookmark",
+          "media_id": 405,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:36",
+          "updated_at": "2023-01-15T17:00:36.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 14421,
+        "name": "Kimetsu no Yaiba",
+        "rus_name": "Клинок, рассекающий демонов",
+        "eng_name": "Demon Slayer: Kimetsu no Yaiba",
+        "slug": "kimetsu-no-yaiba-anime",
+        "slug_url": "14421--kimetsu-no-yaiba-anime",
+        "cover": {
+          "filename": "c59c9ff1-d7e9-4492-88db-ab3c57af2255",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/14421/cover/c59c9ff1-d7e9-4492-88db-ab3c57af2255_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/14421/cover/c59c9ff1-d7e9-4492-88db-ab3c57af2255.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/14421/cover/c59c9ff1-d7e9-4492-88db-ab3c57af2255.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.78",
+          "averageFormated": "8.8",
+          "votes": 5055,
+          "votesFormated": "5.1 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657234,
+          "type": "anime_bookmark",
+          "media_id": 14421,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:39",
+          "updated_at": "2023-01-15T17:00:39.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 19783,
+        "name": "Jujutsu Kaisen 2nd Season",
+        "rus_name": "Магическая битва 2",
+        "eng_name": "Jujutsu Kaisen Season 2",
+        "slug": "jujutsu-kaisen-2nd-season-anime",
+        "slug_url": "19783--jujutsu-kaisen-2nd-season-anime",
+        "cover": {
+          "filename": "75776981-7e6b-44ed-baa3-e96cca6dc9b7",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/19783/cover/75776981-7e6b-44ed-baa3-e96cca6dc9b7_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/19783/cover/75776981-7e6b-44ed-baa3-e96cca6dc9b7.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/19783/cover/75776981-7e6b-44ed-baa3-e96cca6dc9b7.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.3",
+          "averageFormated": "9.3",
+          "votes": 4508,
+          "votesFormated": "4.5 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 4562892,
+          "type": "anime_bookmark",
+          "media_id": 19783,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-04-21 05:02:51",
+          "updated_at": "2024-01-13T05:25:23.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 9710,
+        "name": "Koe no Katachi",
+        "rus_name": "Форма голоса",
+        "eng_name": "A Silent Voice",
+        "slug": "koe-no-katachi-anime",
+        "slug_url": "9710--koe-no-katachi-anime",
+        "cover": {
+          "filename": "482c769c-37d7-4d8a-9f29-e49a6b9cdf9a",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/9710/cover/482c769c-37d7-4d8a-9f29-e49a6b9cdf9a_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/9710/cover/482c769c-37d7-4d8a-9f29-e49a6b9cdf9a.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/9710/cover/482c769c-37d7-4d8a-9f29-e49a6b9cdf9a.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 17,
+          "label": "Фильм"
+        },
+        "rating": {
+          "average": "9.24",
+          "averageFormated": "9.2",
+          "votes": 4465,
+          "votesFormated": "4.5 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657140,
+          "type": "anime_bookmark",
+          "media_id": 9710,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-01-15T17:00:37.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 11126,
+        "name": "Kimi no Na wa.",
+        "rus_name": "Твоё имя",
+        "eng_name": "Your Name.",
+        "slug": "kimi-no-na-wa-anime",
+        "slug_url": "11126--kimi-no-na-wa-anime",
+        "cover": {
+          "filename": "0efa6558-fffd-4f0b-9abe-72b495fc6037",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/11126/cover/0efa6558-fffd-4f0b-9abe-72b495fc6037_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/11126/cover/0efa6558-fffd-4f0b-9abe-72b495fc6037.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/11126/cover/0efa6558-fffd-4f0b-9abe-72b495fc6037.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 17,
+          "label": "Фильм"
+        },
+        "rating": {
+          "average": "9.23",
+          "averageFormated": "9.2",
+          "votes": 4391,
+          "votesFormated": "4.4 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657169,
+          "type": "anime_bookmark",
+          "media_id": 11126,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:38",
+          "updated_at": "2023-01-15T17:00:38.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 7389,
+        "name": "Shingeki no Kyojin",
+        "rus_name": "Атака титанов",
+        "eng_name": "Attack on Titan",
+        "slug": "shingeki-no-kyojin-anime",
+        "slug_url": "7389--shingeki-no-kyojin-anime",
+        "cover": {
+          "filename": "9d1a069b-9529-41a6-bdf8-7cd44c8f26a1",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/7389/cover/9d1a069b-9529-41a6-bdf8-7cd44c8f26a1_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/7389/cover/9d1a069b-9529-41a6-bdf8-7cd44c8f26a1.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/7389/cover/9d1a069b-9529-41a6-bdf8-7cd44c8f26a1.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.31",
+          "averageFormated": "9.3",
+          "votes": 4236,
+          "votesFormated": "4.2 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657094,
+          "type": "anime_bookmark",
+          "media_id": 7389,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:36",
+          "updated_at": "2023-01-15T17:00:36.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 21371,
+        "name": "Sousou no Frieren",
+        "rus_name": "Провожающая в последний путь Фрирен",
+        "eng_name": "Frieren: Beyond Journey's End",
+        "slug": "sousou-no-frieren-anime",
+        "slug_url": "21371--sousou-no-frieren-anime",
+        "cover": {
+          "filename": "432b4910-6484-45c6-8a42-bca940e59d28",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/21371/cover/432b4910-6484-45c6-8a42-bca940e59d28_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/21371/cover/432b4910-6484-45c6-8a42-bca940e59d28.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/21371/cover/432b4910-6484-45c6-8a42-bca940e59d28.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.47",
+          "averageFormated": "9.5",
+          "votes": 4428,
+          "votesFormated": "4.4 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 6920718,
+          "type": "anime_bookmark",
+          "media_id": 21371,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-11-03 07:25:30",
+          "updated_at": "2024-03-24T04:41:27.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 17049,
+        "name": "Horimiya",
+        "rus_name": "Хоримия",
+        "eng_name": "Horimiya",
+        "slug": "horimiya-anime",
+        "slug_url": "17049--horimiya-anime",
+        "cover": {
+          "filename": "7aeb07e2-e0c4-4890-9bde-2d65907a9a75",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/17049/cover/7aeb07e2-e0c4-4890-9bde-2d65907a9a75_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/17049/cover/7aeb07e2-e0c4-4890-9bde-2d65907a9a75.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/17049/cover/7aeb07e2-e0c4-4890-9bde-2d65907a9a75.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.99",
+          "averageFormated": "9.0",
+          "votes": 4373,
+          "votesFormated": "4.4 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657296,
+          "type": "anime_bookmark",
+          "media_id": 17049,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:41",
+          "updated_at": "2023-01-15T17:00:41.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 177,
+        "name": "Sen to Chihiro no Kamikakushi",
+        "rus_name": "Унесённые призраками",
+        "eng_name": "Spirited Away",
+        "slug": "sen-to-chihiro-no-kamikakushi-anime",
+        "slug_url": "177--sen-to-chihiro-no-kamikakushi-anime",
+        "cover": {
+          "filename": "0eca8b13-bc1f-4c9d-9a1d-f03346fee9d0",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/177/cover/0eca8b13-bc1f-4c9d-9a1d-f03346fee9d0_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/177/cover/0eca8b13-bc1f-4c9d-9a1d-f03346fee9d0.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/177/cover/0eca8b13-bc1f-4c9d-9a1d-f03346fee9d0.jpg"
+        },
+        "ageRestriction": {
+          "id": 1,
+          "label": "6+"
+        },
+        "site": 5,
+        "type": {
+          "id": 17,
+          "label": "Фильм"
+        },
+        "rating": {
+          "average": "9.55",
+          "averageFormated": "9.6",
+          "votes": 3646,
+          "votesFormated": "3.6 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657003,
+          "type": "anime_bookmark",
+          "media_id": 177,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:36",
+          "updated_at": "2023-01-15T17:00:36.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 20545,
+        "name": "[Oshi no Ko]",
+        "rus_name": "Ребёнок идола",
+        "eng_name": "[Oshi No Ko]",
+        "slug": "oshi-no-ko-anime",
+        "slug_url": "20545--oshi-no-ko-anime",
+        "cover": {
+          "filename": "ae6907af-8ab1-4b72-a41d-8718365a83d8",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/20545/cover/ae6907af-8ab1-4b72-a41d-8718365a83d8_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/20545/cover/ae6907af-8ab1-4b72-a41d-8718365a83d8.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/20545/cover/ae6907af-8ab1-4b72-a41d-8718365a83d8.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.04",
+          "averageFormated": "9.0",
+          "votes": 3795,
+          "votesFormated": "3.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 3872958,
+          "type": "anime_bookmark",
+          "media_id": 20545,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-03-18 16:03:29",
+          "updated_at": "2023-07-05T15:47:27.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 6414,
+        "name": "Hunter x Hunter (2011)",
+        "rus_name": "Охотник х Охотник (2011)",
+        "eng_name": "Hunter x Hunter",
+        "slug": "hunter-x-hunter-2011-anime",
+        "slug_url": "6414--hunter-x-hunter-2011-anime",
+        "cover": {
+          "filename": "05a7829c-5a91-45a9-ab2f-0a05bfcd0895",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/6414/cover/05a7829c-5a91-45a9-ab2f-0a05bfcd0895_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/6414/cover/05a7829c-5a91-45a9-ab2f-0a05bfcd0895.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/6414/cover/05a7829c-5a91-45a9-ab2f-0a05bfcd0895.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.57",
+          "averageFormated": "9.6",
+          "votes": 3621,
+          "votesFormated": "3.6 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657070,
+          "type": "anime_bookmark",
+          "media_id": 6414,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:36",
+          "updated_at": "2023-01-15T17:00:36.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 16121,
+        "name": "Tian Guan Cifu",
+        "rus_name": "Благословение небожителей",
+        "eng_name": "Heaven Official's Blessing",
+        "slug": "tian-guan-cifu-anime",
+        "slug_url": "16121--tian-guan-cifu-anime",
+        "cover": {
+          "filename": "71c02719-0be9-4029-b5b3-6346aed4ce63",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/16121/cover/71c02719-0be9-4029-b5b3-6346aed4ce63_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/16121/cover/71c02719-0be9-4029-b5b3-6346aed4ce63.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/16121/cover/71c02719-0be9-4029-b5b3-6346aed4ce63.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 21,
+          "label": "ONA"
+        },
+        "rating": {
+          "average": "9.75",
+          "averageFormated": "9.8",
+          "votes": 2749,
+          "votesFormated": "2.7 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657271,
+          "type": "anime_bookmark",
+          "media_id": 16121,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:40",
+          "updated_at": "2023-01-15T17:00:40.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 19521,
+        "name": "Spy x Family",
+        "rus_name": "Семья шпиона",
+        "eng_name": null,
+        "slug": "spy-x-family-anime",
+        "slug_url": "19521--spy-x-family-anime",
+        "cover": {
+          "filename": "adc045d9-fe6e-4076-b5aa-e299a714133d",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/19521/cover/adc045d9-fe6e-4076-b5aa-e299a714133d_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/19521/cover/adc045d9-fe6e-4076-b5aa-e299a714133d.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/19521/cover/adc045d9-fe6e-4076-b5aa-e299a714133d.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.86",
+          "averageFormated": "8.9",
+          "votes": 3680,
+          "votesFormated": "3.7 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657341,
+          "type": "anime_bookmark",
+          "media_id": 19521,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:42",
+          "updated_at": "2023-01-15T17:00:42.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 8231,
+        "name": "Noragami",
+        "rus_name": "Бездомный бог",
+        "eng_name": "Noragami",
+        "slug": "noragami-anime",
+        "slug_url": "8231--noragami-anime",
+        "cover": {
+          "filename": "b99322b8-888a-4fd9-b28d-dbd49802486d",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/8231/cover/b99322b8-888a-4fd9-b28d-dbd49802486d_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/8231/cover/b99322b8-888a-4fd9-b28d-dbd49802486d.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/8231/cover/b99322b8-888a-4fd9-b28d-dbd49802486d.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.89",
+          "averageFormated": "8.9",
+          "votes": 3651,
+          "votesFormated": "3.7 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657110,
+          "type": "anime_bookmark",
+          "media_id": 8231,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-01-15T17:00:37.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 12,
+        "name": "One Piece",
+        "rus_name": "Ван-Пис",
+        "eng_name": "One Piece",
+        "slug": "one-piece-anime",
+        "slug_url": "12--one-piece-anime",
+        "cover": {
+          "filename": "1ec34c26-6355-4085-ba94-9598a04f6544",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/12/cover/1ec34c26-6355-4085-ba94-9598a04f6544_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/12/cover/1ec34c26-6355-4085-ba94-9598a04f6544.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/12/cover/1ec34c26-6355-4085-ba94-9598a04f6544.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.61",
+          "averageFormated": "9.6",
+          "votes": 3047,
+          "votesFormated": "3 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2656992,
+          "type": "anime_bookmark",
+          "media_id": 12,
+          "item_id": null,
+          "progress": null,
+          "status": 27,
+          "created_at": "2023-01-15 17:00:36",
+          "updated_at": "2023-08-09T06:50:45.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 1,
+          "label": "Онгоинг"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 18502,
+        "name": "Kimetsu no Yaiba: Yuukaku-hen",
+        "rus_name": "Клинок, рассекающий демонов: Квартал красных фонарей",
+        "eng_name": "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc",
+        "slug": "kimetsu-no-yaiba-yuukaku-hen-anime",
+        "slug_url": "18502--kimetsu-no-yaiba-yuukaku-hen-anime",
+        "cover": {
+          "filename": "1da0511f-3e9f-4761-8e71-81338f9c7b54",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/18502/cover/1da0511f-3e9f-4761-8e71-81338f9c7b54_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/18502/cover/1da0511f-3e9f-4761-8e71-81338f9c7b54.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/18502/cover/1da0511f-3e9f-4761-8e71-81338f9c7b54.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.14",
+          "averageFormated": "9.1",
+          "votes": 3512,
+          "votesFormated": "3.5 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657312,
+          "type": "anime_bookmark",
+          "media_id": 18502,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:41",
+          "updated_at": "2023-01-15T17:00:41.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 11,
+        "name": "Naruto",
+        "rus_name": "Наруто",
+        "eng_name": "Naruto",
+        "slug": "naruto-anime",
+        "slug_url": "11--naruto-anime",
+        "cover": {
+          "filename": "ce12eeba-fea1-4653-8cfd-2c8b0f2f52d4",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/11/cover/ce12eeba-fea1-4653-8cfd-2c8b0f2f52d4_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/11/cover/ce12eeba-fea1-4653-8cfd-2c8b0f2f52d4.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/11/cover/ce12eeba-fea1-4653-8cfd-2c8b0f2f52d4.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.02",
+          "averageFormated": "9.0",
+          "votes": 3560,
+          "votesFormated": "3.6 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2656991,
+          "type": "anime_bookmark",
+          "media_id": 11,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:36",
+          "updated_at": "2023-01-15T17:00:36.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 14276,
+        "name": "Yakusoku no Neverland",
+        "rus_name": "Обещанный Неверленд",
+        "eng_name": "The Promised Neverland",
+        "slug": "yakusoku-no-neverland-anime",
+        "slug_url": "14276--yakusoku-no-neverland-anime",
+        "cover": {
+          "filename": "0108a1d7-cf1d-4301-8c84-0e5d72ee7ffa",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/14276/cover/0108a1d7-cf1d-4301-8c84-0e5d72ee7ffa_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/14276/cover/0108a1d7-cf1d-4301-8c84-0e5d72ee7ffa.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/14276/cover/0108a1d7-cf1d-4301-8c84-0e5d72ee7ffa.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.04",
+          "averageFormated": "9.0",
+          "votes": 3426,
+          "votesFormated": "3.4 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657228,
+          "type": "anime_bookmark",
+          "media_id": 14276,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:39",
+          "updated_at": "2023-01-15T17:00:39.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 15449,
+        "name": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+        "rus_name": "Реинкарнация безработного: История о приключениях в другом мире",
+        "eng_name": "Mushoku Tensei: Jobless Reincarnation",
+        "slug": "mushoku-tensei-isekai-ittara-honki-dasu-anime",
+        "slug_url": "15449--mushoku-tensei-isekai-ittara-honki-dasu-anime",
+        "cover": {
+          "filename": "d6d84c90-709c-4f94-89c3-8785b1fe7d1d",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/15449/cover/d6d84c90-709c-4f94-89c3-8785b1fe7d1d_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/15449/cover/d6d84c90-709c-4f94-89c3-8785b1fe7d1d.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/15449/cover/d6d84c90-709c-4f94-89c3-8785b1fe7d1d.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.81",
+          "averageFormated": "8.8",
+          "votes": 3843,
+          "votesFormated": "3.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657255,
+          "type": "anime_bookmark",
+          "media_id": 15449,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:40",
+          "updated_at": "2023-02-16T20:20:25.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 10272,
+        "name": "One Punch Man",
+        "rus_name": "Ванпанчмен",
+        "eng_name": "One Punch Man",
+        "slug": "one-punch-man-anime",
+        "slug_url": "10272--one-punch-man-anime",
+        "cover": {
+          "filename": "10dc71bd-eb78-4989-8a29-28b1df67543e",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/10272/cover/10dc71bd-eb78-4989-8a29-28b1df67543e_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/10272/cover/10dc71bd-eb78-4989-8a29-28b1df67543e.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/10272/cover/10dc71bd-eb78-4989-8a29-28b1df67543e.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.16",
+          "averageFormated": "9.2",
+          "votes": 3306,
+          "votesFormated": "3.3 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657149,
+          "type": "anime_bookmark",
+          "media_id": 10272,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-01-15T17:00:37.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 8583,
+        "name": "Tokyo Ghoul",
+        "rus_name": "Токийский гуль",
+        "eng_name": "Tokyo Ghoul",
+        "slug": "tokyo-ghoul-anime",
+        "slug_url": "8583--tokyo-ghoul-anime",
+        "cover": {
+          "filename": "cedd7f2a-e682-44ce-a46a-fe21c5934e61",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/8583/cover/cedd7f2a-e682-44ce-a46a-fe21c5934e61_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/8583/cover/cedd7f2a-e682-44ce-a46a-fe21c5934e61.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/8583/cover/cedd7f2a-e682-44ce-a46a-fe21c5934e61.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.38",
+          "averageFormated": "8.4",
+          "votes": 3955,
+          "votesFormated": "4 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657117,
+          "type": "anime_bookmark",
+          "media_id": 8583,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-01-15T17:00:37.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 8824,
+        "name": "Zankyou no Terror",
+        "rus_name": "Эхо террора",
+        "eng_name": "Terror in Resonance",
+        "slug": "zankyou-no-terror-anime",
+        "slug_url": "8824--zankyou-no-terror-anime",
+        "cover": {
+          "filename": "a14c678e-ac63-4463-8ecf-7a668d56c52e",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/8824/cover/a14c678e-ac63-4463-8ecf-7a668d56c52e_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/8824/cover/a14c678e-ac63-4463-8ecf-7a668d56c52e.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/8824/cover/a14c678e-ac63-4463-8ecf-7a668d56c52e.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.84",
+          "averageFormated": "8.8",
+          "votes": 3250,
+          "votesFormated": "3.3 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657120,
+          "type": "anime_bookmark",
+          "media_id": 8824,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-01-15T17:00:37.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 9207,
+        "name": "Shingeki no Kyojin Season 2",
+        "rus_name": "Атака титанов 2",
+        "eng_name": "Attack on Titan Season 2",
+        "slug": "shingeki-no-kyojin-season-2-anime",
+        "slug_url": "9207--shingeki-no-kyojin-season-2-anime",
+        "cover": {
+          "filename": "ad5b4bc3-1846-4679-b019-afe9dabf8bc5",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/9207/cover/ad5b4bc3-1846-4679-b019-afe9dabf8bc5_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/9207/cover/ad5b4bc3-1846-4679-b019-afe9dabf8bc5.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/9207/cover/ad5b4bc3-1846-4679-b019-afe9dabf8bc5.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.28",
+          "averageFormated": "9.3",
+          "votes": 3112,
+          "votesFormated": "3.1 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657129,
+          "type": "anime_bookmark",
+          "media_id": 9207,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-01-15T17:00:37.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 18797,
+        "name": "Jujutsu Kaisen 0 Movie",
+        "rus_name": "Магическая битва 0. Фильм",
+        "eng_name": "Jujutsu Kaisen 0",
+        "slug": "jujutsu-kaisen-0-movie-anime",
+        "slug_url": "18797--jujutsu-kaisen-0-movie-anime",
+        "cover": {
+          "filename": "bbddd943-e53a-4590-8b08-0bcdf3c3e997",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/18797/cover/bbddd943-e53a-4590-8b08-0bcdf3c3e997_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/18797/cover/bbddd943-e53a-4590-8b08-0bcdf3c3e997.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/18797/cover/bbddd943-e53a-4590-8b08-0bcdf3c3e997.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 17,
+          "label": "Фильм"
+        },
+        "rating": {
+          "average": "9.1",
+          "averageFormated": "9.1",
+          "votes": 3227,
+          "votesFormated": "3.2 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657318,
+          "type": "anime_bookmark",
+          "media_id": 18797,
+          "item_id": 95113,
+          "progress": "1:29:15",
+          "status": 24,
+          "created_at": "2023-01-15 17:00:41",
+          "updated_at": "2024-06-14T16:31:20.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": 0,
+            "item_number": 1,
+            "player": "Animelib",
+            "team": 32412,
+            "translation_type": 2
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 19788,
+        "name": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+        "rus_name": "Клинок, рассекающий демонов: Деревня кузнецов",
+        "eng_name": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc",
+        "slug": "kimetsu-no-yaiba-katanakaji-no-sato-hen-anime",
+        "slug_url": "19788--kimetsu-no-yaiba-katanakaji-no-sato-hen-anime",
+        "cover": {
+          "filename": "8401cf36-c202-4a88-90d5-f7c4b6cd9b92",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/19788/cover/8401cf36-c202-4a88-90d5-f7c4b6cd9b92_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/19788/cover/8401cf36-c202-4a88-90d5-f7c4b6cd9b92.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/19788/cover/8401cf36-c202-4a88-90d5-f7c4b6cd9b92.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.9",
+          "averageFormated": "8.9",
+          "votes": 3262,
+          "votesFormated": "3.3 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 4562893,
+          "type": "anime_bookmark",
+          "media_id": 19788,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-04-21 05:02:51",
+          "updated_at": "2023-06-19T18:54:20.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 19199,
+        "name": "Blue Lock",
+        "rus_name": "Синяя тюрьма: Блю Лок",
+        "eng_name": "Blue Lock",
+        "slug": "blue-lock-anime",
+        "slug_url": "19199--blue-lock-anime",
+        "cover": {
+          "filename": "3803ed53-8ed4-4ee9-a16a-cfeb88289885",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/19199/cover/3803ed53-8ed4-4ee9-a16a-cfeb88289885_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/19199/cover/3803ed53-8ed4-4ee9-a16a-cfeb88289885.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/19199/cover/3803ed53-8ed4-4ee9-a16a-cfeb88289885.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.07",
+          "averageFormated": "9.1",
+          "votes": 2899,
+          "votesFormated": "2.9 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657331,
+          "type": "anime_bookmark",
+          "media_id": 19199,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:42",
+          "updated_at": "2023-04-21T05:02:51.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 16050,
+        "name": "Umibe no Étranger",
+        "rus_name": "Незнакомец на берегу моря",
+        "eng_name": "The Stranger by the Shore",
+        "slug": "umibe-no-etranger-anime",
+        "slug_url": "16050--umibe-no-etranger-anime",
+        "cover": {
+          "filename": "4cf66b9e-ea64-4fd5-b4ae-7dc778ab74d5",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/16050/cover/4cf66b9e-ea64-4fd5-b4ae-7dc778ab74d5_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/16050/cover/4cf66b9e-ea64-4fd5-b4ae-7dc778ab74d5.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/16050/cover/4cf66b9e-ea64-4fd5-b4ae-7dc778ab74d5.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 17,
+          "label": "Фильм"
+        },
+        "rating": {
+          "average": "9.34",
+          "averageFormated": "9.3",
+          "votes": 2171,
+          "votesFormated": "2.2 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 5361930,
+          "type": "anime_bookmark",
+          "media_id": 16050,
+          "item_id": null,
+          "progress": null,
+          "status": 22,
+          "created_at": "2023-06-19 18:54:20",
+          "updated_at": "2023-06-19T18:54:20.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 14106,
+        "name": "Dororo",
+        "rus_name": "Дороро",
+        "eng_name": "Dororo",
+        "slug": "dororo-anime",
+        "slug_url": "14106--dororo-anime",
+        "cover": {
+          "filename": "a0edf49a-a473-4ede-9545-18b2689672e3",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/14106/cover/a0edf49a-a473-4ede-9545-18b2689672e3_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/14106/cover/a0edf49a-a473-4ede-9545-18b2689672e3.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/14106/cover/a0edf49a-a473-4ede-9545-18b2689672e3.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.21",
+          "averageFormated": "9.2",
+          "votes": 2760,
+          "votesFormated": "2.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657224,
+          "type": "anime_bookmark",
+          "media_id": 14106,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:39",
+          "updated_at": "2023-01-15T17:00:39.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 13914,
+        "name": "Mo Dao Zu Shi",
+        "rus_name": "Магистр дьявольского культа",
+        "eng_name": "The Founder of Diabolism",
+        "slug": "mo-dao-zu-shi-anime",
+        "slug_url": "13914--mo-dao-zu-shi-anime",
+        "cover": {
+          "filename": "bb408279-c37d-4429-aec6-4767a9ea020d",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/13914/cover/bb408279-c37d-4429-aec6-4767a9ea020d_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/13914/cover/bb408279-c37d-4429-aec6-4767a9ea020d.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/13914/cover/bb408279-c37d-4429-aec6-4767a9ea020d.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 21,
+          "label": "ONA"
+        },
+        "rating": {
+          "average": "9.65",
+          "averageFormated": "9.7",
+          "votes": 2179,
+          "votesFormated": "2.2 K",
+          "user": 0
+        },
+        "userBookmark": null,
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 13054,
+        "name": "Shingeki no Kyojin Season 3",
+        "rus_name": "Атака титанов 3",
+        "eng_name": "Attack on Titan Season 3",
+        "slug": "shingeki-no-kyojin-season-3-anime",
+        "slug_url": "13054--shingeki-no-kyojin-season-3-anime",
+        "cover": {
+          "filename": "05471405-7a03-4048-88b6-07ee6582501c",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/13054/cover/05471405-7a03-4048-88b6-07ee6582501c_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/13054/cover/05471405-7a03-4048-88b6-07ee6582501c.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/13054/cover/05471405-7a03-4048-88b6-07ee6582501c.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.23",
+          "averageFormated": "9.2",
+          "votes": 2847,
+          "votesFormated": "2.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657203,
+          "type": "anime_bookmark",
+          "media_id": 13054,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:38",
+          "updated_at": "2023-01-15T17:00:38.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 1539,
+        "name": "Naruto: Shippuuden",
+        "rus_name": "Наруто: Ураганные хроники",
+        "eng_name": "Naruto Shippuden",
+        "slug": "naruto-shippuuden-anime",
+        "slug_url": "1539--naruto-shippuuden-anime",
+        "cover": {
+          "filename": "5ed81c60-3b08-40ab-a476-0e44dc2c1686",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/1539/cover/5ed81c60-3b08-40ab-a476-0e44dc2c1686_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/1539/cover/5ed81c60-3b08-40ab-a476-0e44dc2c1686.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/1539/cover/5ed81c60-3b08-40ab-a476-0e44dc2c1686.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.13",
+          "averageFormated": "9.1",
+          "votes": 2859,
+          "votesFormated": "2.9 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657029,
+          "type": "anime_bookmark",
+          "media_id": 1539,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:36",
+          "updated_at": "2023-01-15T17:00:36.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 7107,
+        "name": "Kamisama Hajimemashita",
+        "rus_name": "Очень приятно, Бог",
+        "eng_name": "Kamisama Kiss",
+        "slug": "kamisama-hajimemashita-anime",
+        "slug_url": "7107--kamisama-hajimemashita-anime",
+        "cover": {
+          "filename": "133bca8b-bd42-4082-86c2-358c032a3aa3",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/7107/cover/133bca8b-bd42-4082-86c2-358c032a3aa3_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/7107/cover/133bca8b-bd42-4082-86c2-358c032a3aa3.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/7107/cover/133bca8b-bd42-4082-86c2-358c032a3aa3.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.23",
+          "averageFormated": "9.2",
+          "votes": 2520,
+          "votesFormated": "2.5 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657085,
+          "type": "anime_bookmark",
+          "media_id": 7107,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:36",
+          "updated_at": "2023-01-15T17:00:36.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 16788,
+        "name": "Cyberpunk: Edgerunners",
+        "rus_name": "Киберпанк: Бегущие по краю",
+        "eng_name": null,
+        "slug": "cyberpunk-edgerunners-anime",
+        "slug_url": "16788--cyberpunk-edgerunners-anime",
+        "cover": {
+          "filename": "d4a9af01-8edd-49c3-9b46-70039e641e6d",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/16788/cover/d4a9af01-8edd-49c3-9b46-70039e641e6d_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/16788/cover/d4a9af01-8edd-49c3-9b46-70039e641e6d.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/16788/cover/d4a9af01-8edd-49c3-9b46-70039e641e6d.jpg"
+        },
+        "ageRestriction": {
+          "id": 4,
+          "label": "18+"
+        },
+        "site": 5,
+        "type": {
+          "id": 21,
+          "label": "ONA"
+        },
+        "rating": {
+          "average": "8.93",
+          "averageFormated": "8.9",
+          "votes": 3232,
+          "votesFormated": "3.2 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657294,
+          "type": "anime_bookmark",
+          "media_id": 16788,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:41",
+          "updated_at": "2023-01-15T17:00:41.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 14848,
+        "name": "Dr. Stone",
+        "rus_name": "Доктор Стоун",
+        "eng_name": "Dr. Stone",
+        "slug": "dr-stone-anime",
+        "slug_url": "14848--dr-stone-anime",
+        "cover": {
+          "filename": "bcc453e4-d976-4601-ab62-c2de85b7eb1c",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/14848/cover/bcc453e4-d976-4601-ab62-c2de85b7eb1c_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/14848/cover/bcc453e4-d976-4601-ab62-c2de85b7eb1c.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/14848/cover/bcc453e4-d976-4601-ab62-c2de85b7eb1c.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.09",
+          "averageFormated": "9.1",
+          "votes": 2843,
+          "votesFormated": "2.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657245,
+          "type": "anime_bookmark",
+          "media_id": 14848,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:39",
+          "updated_at": "2023-03-09T03:20:15.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 14752,
+        "name": "Shingeki no Kyojin Season 3 Part 2",
+        "rus_name": "Атака титанов 3. Часть 2",
+        "eng_name": "Attack on Titan Season 3 Part 2",
+        "slug": "shingeki-no-kyojin-season-3-part-2-anime",
+        "slug_url": "14752--shingeki-no-kyojin-season-3-part-2-anime",
+        "cover": {
+          "filename": "0830d3dd-4b7b-4f59-8769-0e83cfa7520f",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/14752/cover/0830d3dd-4b7b-4f59-8769-0e83cfa7520f_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/14752/cover/0830d3dd-4b7b-4f59-8769-0e83cfa7520f.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/14752/cover/0830d3dd-4b7b-4f59-8769-0e83cfa7520f.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.32",
+          "averageFormated": "9.3",
+          "votes": 2628,
+          "votesFormated": "2.6 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657240,
+          "type": "anime_bookmark",
+          "media_id": 14752,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:39",
+          "updated_at": "2023-01-15T17:00:39.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 13850,
+        "name": "Grand Blue",
+        "rus_name": "Необъятный океан",
+        "eng_name": "Grand Blue Dreaming",
+        "slug": "grand-blue-anime",
+        "slug_url": "13850--grand-blue-anime",
+        "cover": {
+          "filename": "3e5e853f-cbb1-46a2-bda1-f5319f06b5fc",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/13850/cover/3e5e853f-cbb1-46a2-bda1-f5319f06b5fc_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/13850/cover/3e5e853f-cbb1-46a2-bda1-f5319f06b5fc.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/13850/cover/3e5e853f-cbb1-46a2-bda1-f5319f06b5fc.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.38",
+          "averageFormated": "9.4",
+          "votes": 2739,
+          "votesFormated": "2.7 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657217,
+          "type": "anime_bookmark",
+          "media_id": 13850,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:39",
+          "updated_at": "2023-01-15T17:00:39.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 8244,
+        "name": "Haikyuu!!",
+        "rus_name": "Волейбол!!",
+        "eng_name": "Haikyu!!",
+        "slug": "haikyuu-anime",
+        "slug_url": "8244--haikyuu-anime",
+        "cover": {
+          "filename": "3171a174-4d65-432e-9896-35653c1403ae",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/8244/cover/3171a174-4d65-432e-9896-35653c1403ae_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/8244/cover/3171a174-4d65-432e-9896-35653c1403ae.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/8244/cover/3171a174-4d65-432e-9896-35653c1403ae.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.27",
+          "averageFormated": "9.3",
+          "votes": 2397,
+          "votesFormated": "2.4 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657111,
+          "type": "anime_bookmark",
+          "media_id": 8244,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-02-16T20:20:24.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 10782,
+        "name": "Bungou Stray Dogs",
+        "rus_name": "Великий из бродячих псов",
+        "eng_name": "Bungo Stray Dogs",
+        "slug": "bungou-stray-dogs-anime",
+        "slug_url": "10782--bungou-stray-dogs-anime",
+        "cover": {
+          "filename": "f30a7297-62df-44bc-8f48-83edff943789",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/10782/cover/f30a7297-62df-44bc-8f48-83edff943789_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/10782/cover/f30a7297-62df-44bc-8f48-83edff943789.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/10782/cover/f30a7297-62df-44bc-8f48-83edff943789.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.79",
+          "averageFormated": "8.8",
+          "votes": 2462,
+          "votesFormated": "2.5 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657160,
+          "type": "anime_bookmark",
+          "media_id": 10782,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-01-15T17:00:37.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 15956,
+        "name": "Kimetsu no Yaiba Movie: Mugen Ressha-hen",
+        "rus_name": "Клинок, рассекающий демонов: Бесконечный поезд. Фильм",
+        "eng_name": "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
+        "slug": "kimetsu-no-yaiba-movie-mugen-ressha-hen-anime",
+        "slug_url": "15956--kimetsu-no-yaiba-movie-mugen-ressha-hen-anime",
+        "cover": {
+          "filename": "dcd57b0a-a306-40a2-a476-27421741a90d",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/15956/cover/dcd57b0a-a306-40a2-a476-27421741a90d_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/15956/cover/dcd57b0a-a306-40a2-a476-27421741a90d.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/15956/cover/dcd57b0a-a306-40a2-a476-27421741a90d.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 17,
+          "label": "Фильм"
+        },
+        "rating": {
+          "average": "9.04",
+          "averageFormated": "9.0",
+          "votes": 2742,
+          "votesFormated": "2.7 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657267,
+          "type": "anime_bookmark",
+          "media_id": 15956,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:40",
+          "updated_at": "2023-01-15T17:00:40.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 18348,
+        "name": "Jigokuraku",
+        "rus_name": "Адский рай",
+        "eng_name": "Hell's Paradise",
+        "slug": "jigokuraku-anime",
+        "slug_url": "18348--jigokuraku-anime",
+        "cover": {
+          "filename": "5f728022-7031-4d25-86e2-ba6dea6cf5bc",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/18348/cover/5f728022-7031-4d25-86e2-ba6dea6cf5bc_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/18348/cover/5f728022-7031-4d25-86e2-ba6dea6cf5bc.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/18348/cover/5f728022-7031-4d25-86e2-ba6dea6cf5bc.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.92",
+          "averageFormated": "8.9",
+          "votes": 3023,
+          "votesFormated": "3 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 4850492,
+          "type": "anime_bookmark",
+          "media_id": 18348,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-05-10 07:07:04",
+          "updated_at": "2023-07-05T15:47:27.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 18190,
+        "name": "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+        "rus_name": "Реинкарнация безработного: История о приключениях в другом мире. Часть 2",
+        "eng_name": "Mushoku Tensei: Jobless Reincarnation Part 2",
+        "slug": "mushoku-tensei-isekai-ittara-honki-dasu-part-2-anime",
+        "slug_url": "18190--mushoku-tensei-isekai-ittara-honki-dasu-part-2-anime",
+        "cover": {
+          "filename": "3be6f417-4a8e-4307-b67d-716f8e53fd49",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/18190/cover/3be6f417-4a8e-4307-b67d-716f8e53fd49_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/18190/cover/3be6f417-4a8e-4307-b67d-716f8e53fd49.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/18190/cover/3be6f417-4a8e-4307-b67d-716f8e53fd49.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.06",
+          "averageFormated": "9.1",
+          "votes": 2828,
+          "votesFormated": "2.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657306,
+          "type": "anime_bookmark",
+          "media_id": 18190,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:41",
+          "updated_at": "2023-02-16T20:20:25.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 18858,
+        "name": "Sono Bisque Doll wa Koi wo Suru",
+        "rus_name": "Эта фарфоровая кукла влюбилась",
+        "eng_name": "My Dress-Up Darling",
+        "slug": "sono-bisque-doll-wa-koi-wo-suru-anime",
+        "slug_url": "18858--sono-bisque-doll-wa-koi-wo-suru-anime",
+        "cover": {
+          "filename": "92309930-8072-4d4f-af31-312e9137d23f",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/18858/cover/92309930-8072-4d4f-af31-312e9137d23f_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/18858/cover/92309930-8072-4d4f-af31-312e9137d23f.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/18858/cover/92309930-8072-4d4f-af31-312e9137d23f.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.34",
+          "averageFormated": "8.3",
+          "votes": 3174,
+          "votesFormated": "3.2 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657324,
+          "type": "anime_bookmark",
+          "media_id": 18858,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:42",
+          "updated_at": "2023-01-15T17:00:42.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 9035,
+        "name": "Ansatsu Kyoushitsu",
+        "rus_name": "Класс убийц",
+        "eng_name": "Assassination Classroom",
+        "slug": "ansatsu-kyoushitsu-anime",
+        "slug_url": "9035--ansatsu-kyoushitsu-anime",
+        "cover": {
+          "filename": "4785707c-2a34-48e4-b0a3-f290c585098f",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/9035/cover/4785707c-2a34-48e4-b0a3-f290c585098f_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/9035/cover/4785707c-2a34-48e4-b0a3-f290c585098f.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/9035/cover/4785707c-2a34-48e4-b0a3-f290c585098f.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.92",
+          "averageFormated": "8.9",
+          "votes": 2432,
+          "votesFormated": "2.4 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657127,
+          "type": "anime_bookmark",
+          "media_id": 9035,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-03-09T03:20:15.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 10615,
+        "name": "Boku dake ga Inai Machi",
+        "rus_name": "Город, в котором меня нет",
+        "eng_name": "Erased",
+        "slug": "boku-dake-ga-inai-machi-anime",
+        "slug_url": "10615--boku-dake-ga-inai-machi-anime",
+        "cover": {
+          "filename": "90162bd8-f013-4ffd-9b5a-d6bef436a3dd",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/10615/cover/90162bd8-f013-4ffd-9b5a-d6bef436a3dd_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/10615/cover/90162bd8-f013-4ffd-9b5a-d6bef436a3dd.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/10615/cover/90162bd8-f013-4ffd-9b5a-d6bef436a3dd.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.03",
+          "averageFormated": "9.0",
+          "votes": 2583,
+          "votesFormated": "2.6 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657156,
+          "type": "anime_bookmark",
+          "media_id": 10615,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-01-15T17:00:37.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 15713,
+        "name": "Shingeki no Kyojin: The Final Season",
+        "rus_name": "Атака титанов: Финал",
+        "eng_name": "Attack on Titan: Final Season",
+        "slug": "shingeki-no-kyojin-the-final-season-anime",
+        "slug_url": "15713--shingeki-no-kyojin-the-final-season-anime",
+        "cover": {
+          "filename": "d2b66361-9f98-4d0c-8178-5a71d6b49750",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/15713/cover/d2b66361-9f98-4d0c-8178-5a71d6b49750_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/15713/cover/d2b66361-9f98-4d0c-8178-5a71d6b49750.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/15713/cover/d2b66361-9f98-4d0c-8178-5a71d6b49750.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.1",
+          "averageFormated": "9.1",
+          "votes": 2513,
+          "votesFormated": "2.5 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657263,
+          "type": "anime_bookmark",
+          "media_id": 15713,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:40",
+          "updated_at": "2023-01-15T17:00:40.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 19327,
+        "name": "Kimetsu no Yaiba: Mugen Ressha-hen",
+        "rus_name": "Клинок, рассекающий демонов: Бесконечный поезд",
+        "eng_name": "Demon Slayer: Kimetsu no Yaiba Mugen Train Arc",
+        "slug": "kimetsu-no-yaiba-mugen-ressha-hen-anime",
+        "slug_url": "19327--kimetsu-no-yaiba-mugen-ressha-hen-anime",
+        "cover": {
+          "filename": "b9cce601-643c-4076-9f12-734c5647ef2b",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/19327/cover/b9cce601-643c-4076-9f12-734c5647ef2b_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/19327/cover/b9cce601-643c-4076-9f12-734c5647ef2b.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/19327/cover/b9cce601-643c-4076-9f12-734c5647ef2b.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.97",
+          "averageFormated": "9.0",
+          "votes": 2569,
+          "votesFormated": "2.6 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657337,
+          "type": "anime_bookmark",
+          "media_id": 19327,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:42",
+          "updated_at": "2023-01-15T17:00:42.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 19666,
+        "name": "Spy x Family Part 2",
+        "rus_name": "Семья шпиона. Часть 2",
+        "eng_name": null,
+        "slug": "spy-x-family-part-2-anime",
+        "slug_url": "19666--spy-x-family-part-2-anime",
+        "cover": {
+          "filename": "4d4385a9-b3dc-4b19-ab6e-6a583e0d95c0",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/19666/cover/4d4385a9-b3dc-4b19-ab6e-6a583e0d95c0_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/19666/cover/4d4385a9-b3dc-4b19-ab6e-6a583e0d95c0.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/19666/cover/4d4385a9-b3dc-4b19-ab6e-6a583e0d95c0.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.02",
+          "averageFormated": "9.0",
+          "votes": 2336,
+          "votesFormated": "2.3 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657350,
+          "type": "anime_bookmark",
+          "media_id": 19666,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:42",
+          "updated_at": "2023-01-15T17:00:42.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 17744,
+        "name": "Shiguang Dailiren",
+        "rus_name": "Агент времени",
+        "eng_name": "Link Click",
+        "slug": "shiguang-dailiren-anime",
+        "slug_url": "17744--shiguang-dailiren-anime",
+        "cover": {
+          "filename": "002878db-383b-4578-ade3-9bfd62eefc28",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/17744/cover/002878db-383b-4578-ade3-9bfd62eefc28_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/17744/cover/002878db-383b-4578-ade3-9bfd62eefc28.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/17744/cover/002878db-383b-4578-ade3-9bfd62eefc28.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 21,
+          "label": "ONA"
+        },
+        "rating": {
+          "average": "9.52",
+          "averageFormated": "9.5",
+          "votes": 2317,
+          "votesFormated": "2.3 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657303,
+          "type": "anime_bookmark",
+          "media_id": 17744,
+          "item_id": 87253,
+          "progress": "26:24",
+          "status": 27,
+          "created_at": "2023-01-15 17:00:41",
+          "updated_at": "2024-10-29T07:02:43.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": 0,
+            "item_number": 12,
+            "player": "Animelib",
+            "team": 32435,
+            "translation_type": 2
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 21171,
+        "name": "Kaijuu 8-gou",
+        "rus_name": "Кайдзю номер восемь",
+        "eng_name": "Kaiju No. 8",
+        "slug": "kaijuu-8-gou-anime",
+        "slug_url": "21171--kaijuu-8-gou-anime",
+        "cover": {
+          "filename": "ae9f7aa9-7705-4908-8b60-8bb748c6a9e4",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/21171/cover/ae9f7aa9-7705-4908-8b60-8bb748c6a9e4_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/21171/cover/ae9f7aa9-7705-4908-8b60-8bb748c6a9e4.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/21171/cover/ae9f7aa9-7705-4908-8b60-8bb748c6a9e4.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.11",
+          "averageFormated": "9.1",
+          "votes": 2843,
+          "votesFormated": "2.8 K",
+          "user": 0
+        },
+        "userBookmark": null,
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 8641,
+        "name": "Kiseijuu: Sei no Kakuritsu",
+        "rus_name": "Паразит: Учение о жизни",
+        "eng_name": "Parasyte: The Maxim",
+        "slug": "kiseijuu-sei-no-kakuritsu-anime",
+        "slug_url": "8641--kiseijuu-sei-no-kakuritsu-anime",
+        "cover": {
+          "filename": "844c90b5-705f-4bd9-9ec9-579306033489",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/8641/cover/844c90b5-705f-4bd9-9ec9-579306033489_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/8641/cover/844c90b5-705f-4bd9-9ec9-579306033489.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/8641/cover/844c90b5-705f-4bd9-9ec9-579306033489.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.08",
+          "averageFormated": "9.1",
+          "votes": 2409,
+          "votesFormated": "2.4 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657118,
+          "type": "anime_bookmark",
+          "media_id": 8641,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-01-15T17:00:37.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 18698,
+        "name": "Kage no Jitsuryokusha ni Naritakute!",
+        "rus_name": "Восхождение в тени!",
+        "eng_name": "The Eminence in Shadow",
+        "slug": "kage-no-jitsuryokusha-ni-naritakute-anime",
+        "slug_url": "18698--kage-no-jitsuryokusha-ni-naritakute-anime",
+        "cover": {
+          "filename": "ec9704bf-9909-4d3d-a74f-2da1fcf225ff",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/18698/cover/ec9704bf-9909-4d3d-a74f-2da1fcf225ff_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/18698/cover/ec9704bf-9909-4d3d-a74f-2da1fcf225ff.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/18698/cover/ec9704bf-9909-4d3d-a74f-2da1fcf225ff.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.56",
+          "averageFormated": "8.6",
+          "votes": 2842,
+          "votesFormated": "2.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 3328990,
+          "type": "anime_bookmark",
+          "media_id": 18698,
+          "item_id": 108825,
+          "progress": "20:51",
+          "status": 24,
+          "created_at": "2023-02-16 20:20:25",
+          "updated_at": "2024-07-08T16:44:13.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": 0,
+            "item_number": 20,
+            "player": "Animelib",
+            "team": 32412,
+            "translation_type": 2
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 14060,
+        "name": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+        "rus_name": "Этот глупый свин не понимает мечту девочки-зайки",
+        "eng_name": "Rascal Does Not Dream of Bunny Girl Senpai",
+        "slug": "seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai-anime",
+        "slug_url": "14060--seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai-anime",
+        "cover": {
+          "filename": "1b9f067c-9fd0-4622-b2cb-c0f8f6285dfd",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/14060/cover/1b9f067c-9fd0-4622-b2cb-c0f8f6285dfd_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/14060/cover/1b9f067c-9fd0-4622-b2cb-c0f8f6285dfd.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/14060/cover/1b9f067c-9fd0-4622-b2cb-c0f8f6285dfd.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.57",
+          "averageFormated": "8.6",
+          "votes": 2888,
+          "votesFormated": "2.9 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657221,
+          "type": "anime_bookmark",
+          "media_id": 14060,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:39",
+          "updated_at": "2023-01-15T17:00:39.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 14107,
+        "name": "Vinland Saga",
+        "rus_name": "Сага о Винланде",
+        "eng_name": null,
+        "slug": "vinland-saga-anime",
+        "slug_url": "14107--vinland-saga-anime",
+        "cover": {
+          "filename": "8e514150-c941-43ab-9fd7-91fd45e26d30",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/14107/cover/8e514150-c941-43ab-9fd7-91fd45e26d30_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/14107/cover/8e514150-c941-43ab-9fd7-91fd45e26d30.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/14107/cover/8e514150-c941-43ab-9fd7-91fd45e26d30.jpg"
+        },
+        "ageRestriction": {
+          "id": 3,
+          "label": "16+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "9.39",
+          "averageFormated": "9.4",
+          "votes": 2548,
+          "votesFormated": "2.5 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657225,
+          "type": "anime_bookmark",
+          "media_id": 14107,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:39",
+          "updated_at": "2023-03-26T16:56:41.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 8087,
+        "name": "No Game No Life",
+        "rus_name": "Нет игры — нет жизни",
+        "eng_name": "No Game, No Life",
+        "slug": "no-game-no-life-anime",
+        "slug_url": "8087--no-game-no-life-anime",
+        "cover": {
+          "filename": "ce511cdc-58a9-4b27-98fa-16dabd66bb5f",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/8087/cover/ce511cdc-58a9-4b27-98fa-16dabd66bb5f_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/8087/cover/ce511cdc-58a9-4b27-98fa-16dabd66bb5f.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/8087/cover/ce511cdc-58a9-4b27-98fa-16dabd66bb5f.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 16,
+          "label": "TV Сериал"
+        },
+        "rating": {
+          "average": "8.67",
+          "averageFormated": "8.7",
+          "votes": 2563,
+          "votesFormated": "2.6 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657108,
+          "type": "anime_bookmark",
+          "media_id": 8087,
+          "item_id": null,
+          "progress": null,
+          "status": 24,
+          "created_at": "2023-01-15 17:00:37",
+          "updated_at": "2023-06-19T18:54:20.000000Z",
+          "meta": {
+            "comment": false,
+            "rewatches": null,
+            "item_number": null
+          }
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      },
+      {
+        "id": 19576,
+        "name": "Tian Guan Cifu Er",
+        "rus_name": "Благословение небожителей 2",
+        "eng_name": "Heaven Official's Blessing Season 2",
+        "slug": "tian-guan-cifu-er-anime",
+        "slug_url": "19576--tian-guan-cifu-er-anime",
+        "cover": {
+          "filename": "8c2b3920-0966-4b98-9a10-35a9351edf12",
+          "thumbnail": "https://cover.imglib.info/uploads/anime/19576/cover/8c2b3920-0966-4b98-9a10-35a9351edf12_thumb.jpg",
+          "default": "https://cover.imglib.info/uploads/anime/19576/cover/8c2b3920-0966-4b98-9a10-35a9351edf12.jpg",
+          "md": "https://cover.imglib.info/uploads/anime/19576/cover/8c2b3920-0966-4b98-9a10-35a9351edf12.jpg"
+        },
+        "ageRestriction": {
+          "id": 2,
+          "label": "12+"
+        },
+        "site": 5,
+        "type": {
+          "id": 21,
+          "label": "ONA"
+        },
+        "rating": {
+          "average": "9.8",
+          "averageFormated": "9.8",
+          "votes": 1763,
+          "votesFormated": "1.8 K",
+          "user": 0
+        },
+        "userBookmark": {
+          "id": 2657346,
+          "type": "anime_bookmark",
+          "media_id": 19576,
+          "item_id": null,
+          "progress": null,
+          "status": 22,
+          "created_at": "2023-01-15 17:00:42",
+          "updated_at": "2023-01-15T17:00:42.000000Z",
+          "meta": null
+        },
+        "model": "anime",
+        "status": {
+          "id": 2,
+          "label": "Завершён"
+        },
+        "releaseDateString": "",
+        "shiki_rate": null
+      }
+    ],
+    "links": {
+      "first": "http://api2.mangalib.me/api/anime?page=1",
+      "last": null,
+      "prev": null,
+      "next": "http://api2.mangalib.me/api/anime?page=2"
+    },
+    "meta": {
+      "current_page": 1,
+      "from": 1,
+      "path": "http://api2.mangalib.me/api/anime",
+      "per_page": 60,
+      "to": 60,
+      "seed": "ad5e4d5baf64edc6e3502122803b96cc"
+    }
+  }

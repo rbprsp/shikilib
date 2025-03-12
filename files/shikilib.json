@@ -1,0 +1,29 @@
+[
+    {
+        "info":
+        {
+            "title": "",
+            "title_en": "",
+            "title_ru": "",
+            "score": 10,
+            "rewatches": 0,
+            "episodes": 0,
+            "type": "Anime",
+            "status": "completed"
+        },
+        "id":
+        {
+            "shiki": 52588,
+            "anilib": 21171,
+            "slug": "",
+            "slug-url": ""
+        },
+        "cover":
+        {
+            "filename": "",
+            "thumbnail": "",
+            "default": "",
+            "md": ""
+        }
+    }
+]
