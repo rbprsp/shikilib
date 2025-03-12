@@ -1,7 +1,13 @@
+//STL
 #include <iostream>
 #include <fstream>
+#include <thread>
+#include <future>
+
+//EXTERNAL
 #include <spdlog/spdlog.h>
 
+//LOCAL
 #include "parser.h"
 
 #ifdef __linux__
@@ -15,7 +21,227 @@
     //TODO:
 #endif
 
-nlohmann::json Parser::ReadFile(const std::string file_name)
+json Parser::Merge(const json& animelib_json, const json& shikimori_json)
+{
+    json main = MainMerge(animelib_json, shikimori_json);
+    json missed {};
+
+    if(!missing.empty())
+        missed = MissingMerge(std::cref(animelib_json));
+    if(!missing.empty())
+    {
+        spdlog::critical("Some titles was not found in anilib.json, you need to add them manualy");
+        SaveFile("not_found.json", missing);
+    }
+    if(!missed.empty())
+        main.push_back(missed);
+
+    return main;
+}
+
+json Parser::MainMerge(const json &anilib, const json &shiki)
+{
+    json shikilib = json::array();
+
+    //simple checks, I guess
+    if(anilib.empty() || shiki.empty() || !anilib.is_array() || !shiki.is_array())
+    {
+        spdlog::error("Invalid input in merge method, please check your .json files");
+        return shikilib;
+    }
+
+    //total entries here
+    shiki_size  =  shiki.size();
+    anilib_size = anilib.size();
+
+    for(const json title : shiki)
+    {
+        is_found.store(false);
+
+        //no checks here, cuz shiki.json must be auto generated
+        std::string target_title = title["target_title"].get<std::string>();
+
+        json fw_result{}, bw_result{};
+        std::thread  forward(&Parser::SearchDefault, this, true,  target_title, std::cref(anilib), std::ref(fw_result));
+        std::thread backward(&Parser::SearchDefault, this, false, target_title, std::cref(anilib), std::ref(bw_result));
+
+        while(!is_found.load())
+            std::this_thread::yield();
+
+        if(forward.joinable())
+            forward.join();
+        if(backward.joinable())
+            backward.join();
+
+        //check if title is missing
+        if (!fw_result.empty())
+            shikilib.push_back(GenerateMergedObject(title, fw_result));
+        else if (!bw_result.empty())
+            shikilib.push_back(GenerateMergedObject(title, bw_result));
+        else
+            missing.push_back(title);
+    }
+    return shikilib;
+}
+
+json Parser::MissingMerge(const json &anilib)
+{
+    json shikilib     {};
+    json missing_temp {};
+    json fw_ru, fw_en, bw_ru, bw_en;
+
+    for(const json title : missing)
+    {
+        std::string title_ru = title["target_title_ru"].get<std::string>();
+        std::string title_en = title["target_title"].get<std::string>();
+
+        //ru
+        std::thread fr(&Parser::SearchRussian, this, true,  title_ru, std::cref(anilib), std::ref(fw_ru));
+        std::thread br(&Parser::SearchRussian, this, false, title_ru, std::cref(anilib), std::ref(bw_ru));
+
+        //en
+        std::thread fe(&Parser::SearchRussian, this,  true, title_ru, std::cref(anilib), std::ref(bw_ru));
+        std::thread be(&Parser::SearchRussian, this, false, title_ru, std::cref(anilib), std::ref(bw_ru));
+
+        while(!is_found.load())
+            std::this_thread::yield();
+
+        if(fr.joinable()) fr.join();
+        if(br.joinable()) br.join();
+        if(fe.joinable()) be.join();
+        if(be.joinable()) be.join();
+
+        if     (!fw_ru.empty()) shikilib.push_back(GenerateMergedObject(title, fw_ru));
+        else if(!bw_ru.empty()) shikilib.push_back(GenerateMergedObject(title, bw_ru));
+        else if(!fw_en.empty()) shikilib.push_back(GenerateMergedObject(title, fw_en));
+        else if(!bw_en.empty()) shikilib.push_back(GenerateMergedObject(title, bw_en));
+        else missing_temp.push_back(title);
+    }
+    missing = missing_temp;
+    return shikilib;
+}
+
+void Parser::SearchDefault(bool from_start, const std::string &target, const json &anilib, json &result)
+{
+    int start, end, step;
+    if(from_start)
+    {
+        start = 0;
+        end   = anilib_size - 1;
+        step  = 1; 
+    }
+    else
+    {
+        start = anilib_size - 1;
+        end   = -1;
+        step  = -1; 
+    }
+
+    for(int i = start; i != end && !is_found.load(); i += step)
+    {
+        auto thread_id = std::hash<std::thread::id>{}(std::this_thread::get_id());
+        spdlog::debug("ID: 0x{:X}, searching for -> {}", thread_id, target);
+        if(anilib[i]["name"].get<std::string>() == target)
+        {
+            is_found.store(true);
+            result = anilib[i];
+        }
+    }
+    is_found.store(false);
+}
+
+void Parser::SearchRussian(bool from_start, const std::string &target, const json &anilib, json &result)
+{
+    int start, end, step;
+    if(from_start)
+    {
+        start = 0;
+        end   = anilib_size - 1;
+        step  = 1; 
+    }
+    else
+    {
+        start = anilib_size - 1;
+        end   = -1;
+        step  = -1; 
+    }
+
+    for(int i = start; i != end && !is_found.load(); i += step)
+    {
+        auto thread_id = std::hash<std::thread::id>{}(std::this_thread::get_id());
+        spdlog::debug("ID: 0x{:X}, searching for -> {}", thread_id, target);
+        if(anilib[i]["rus_name"].get<std::string>() == target)
+        {
+            is_found.store(true);
+            result = anilib[i];
+        }
+    }
+    is_found.store(false);
+}
+void Parser::SearchEnglish(bool from_start, const std::string &target, const json &anilib, json &result)
+{
+    int start, end, step;
+    if(from_start)
+    {
+        start = 0;
+        end   = anilib_size - 1;
+        step  = 1; 
+    }
+    else
+    {
+        start = anilib_size - 1;
+        end   = -1;
+        step  = -1; 
+    }
+
+    for(int i = start; i != end && !is_found.load(); i += step)
+    {
+        auto thread_id = std::hash<std::thread::id>{}(std::this_thread::get_id());
+        spdlog::debug("ID: 0x{:X}, searching for -> {}", thread_id, target);
+        if(anilib[i]["eng_name"].get<std::string>() == target)
+        {
+            is_found.store(true);
+            result = anilib[i];
+        }
+    }
+    is_found.store(false);
+}
+
+json Parser::GenerateMergedObject(const json &shiki, const json &anilib)
+{
+    nlohmann::ordered_json j = nlohmann::ordered_json::object();
+
+    try
+    {
+        //INFO
+        j["info"]["title"]        = anilib["name"].get<std::string>();
+        j["info"]["title_en"]     = anilib["eng_name"].get<std::string>();
+        j["info"]["title_ru"]     = anilib["rus_name"].get<std::string>();
+        j["info"]["score"]        =  shiki["score"].get<int>();
+        j["info"]["rewatches"]    =  shiki["rewatches"].get<int>();
+        j["info"]["episodes"]     =  shiki["episodes"].get<int>();
+        j["info"]["type"]         =  shiki["target_type"].get<std::string>();
+        j["info"]["status"]       =  shiki["status"].get<std::string>();
+
+        //ID
+        j["id"]["shiki"]          =  shiki["target_id"].get<int>();
+        j["id"]["anilib"]         = anilib["id"].get<int>();
+        j["id"]["slug"]           = anilib["slug"].get<std::string>(); 
+        j["id"]["slug-url"]       = anilib["slug-url"].get<std::string>();
+
+        //cover
+        j["cover"]                = anilib["cover"];
+
+        return j;
+    }
+    catch(const std::exception& e)
+    {
+        spdlog::error("Object generating exception: {0}", e.what());
+        return {};
+    }
+}
+
+json Parser::ReadFile(const std::string file_name)
 {
     nlohmann::json result = {};
 
@@ -46,290 +272,7 @@ nlohmann::json Parser::ReadFile(const std::string file_name)
     return result;
 }
 
-void SaveNotFound(const nlohmann::json& not_found)
-{
-    if (not_found.empty()) 
-    {
-        spdlog::info("All anime were found, no data written to not_found.json");
-        return;
-    }
-
-    std::ofstream file("not_found.json");
-    if (file.is_open()) 
-    {
-        try 
-        {
-            file << not_found.dump(4);
-            spdlog::info("Saved {0} not found anime to not_found.json", not_found.size());
-            file.close();
-        } 
-        catch (const std::exception& e) 
-        {
-            spdlog::error("Failed to write not_found.json: {0}", e.what());
-            file.close();
-        }
-    } 
-    else 
-    {
-        spdlog::error("Failed to open not_found.json for writing");
-    }
-}
-
-nlohmann::json Parser::MergeLists(const nlohmann::json& animelib_json, const nlohmann::json& shikimori_json)
-{
-    nlohmann::json result = nlohmann::json::array();
-    nlohmann::json not_found = nlohmann::json::array();
-
-    if (shikimori_json.empty() || !shikimori_json.is_array()) 
-    {
-        spdlog::warn("Shikimori data is empty or not an array");
-        return result;
-    }
-
-    if (animelib_json.empty() || !animelib_json.is_array()) 
-    {
-        spdlog::warn("Animelib data is empty or not an array");
-        return result;
-    }
-
-    size_t total_shikimori = shikimori_json.size();
-
-    for (const auto& shiki_item : shikimori_json) 
-    {
-        if (shiki_item.empty() || !shiki_item.is_object()) 
-        {
-            spdlog::warn("Invalid or empty object found in shikimori data");
-            continue;
-        }
-
-        std::string target_title;
-        if (shiki_item.contains("target_title") && shiki_item["target_title"].is_string()) 
-        {
-            target_title = shiki_item["target_title"].get<std::string>();
-        } 
-        else 
-        {
-            spdlog::warn("Shikimori object missing or invalid target_title");
-            continue;
-        }
-
-        spdlog::debug("Searching for anime: {0}", target_title);
-
-        bool found = false;
-        for (const auto& animelib_item : animelib_json) 
-        {
-            if (!animelib_item.is_object() || animelib_item.empty()) 
-            {
-                spdlog::debug("Skipping invalid or empty object in animelib");
-                continue;
-            }
-
-            if (animelib_item.contains("name") && animelib_item["name"].is_string() && 
-                animelib_item["name"].get<std::string>() == target_title) 
-            {
-                nlohmann::json merged;
-
-                // title
-                merged["title"]["en"] = animelib_item.contains("eng_name") && animelib_item["eng_name"].is_string()
-                    ? animelib_item["eng_name"].get<std::string>() : "";
-                merged["title"]["ru"] = shiki_item.contains("target_title_ru") && shiki_item["target_title_ru"].is_string()
-                    ? shiki_item["target_title_ru"].get<std::string>() : "";
-
-                // info
-                merged["info"]["anilib_id"] = animelib_item.contains("id") && animelib_item["id"].is_number_integer()
-                    ? animelib_item["id"].get<int>() : 0;
-                merged["info"]["shiki_id"] = shiki_item.contains("target_id") && shiki_item["target_id"].is_number_integer()
-                    ? shiki_item["target_id"].get<int>() : 0;
-                merged["info"]["score"] = shiki_item.contains("score") && shiki_item["score"].is_number_integer()
-                    ? shiki_item["score"].get<int>() : 0;
-                merged["info"]["slug"] = animelib_item.contains("slug") && animelib_item["slug"].is_string()
-                    ? animelib_item["slug"].get<std::string>() : "";
-                merged["info"]["slug_url"] = animelib_item.contains("slug_url") && animelib_item["slug_url"].is_string()
-                    ? animelib_item["slug_url"].get<std::string>() : "";
-                merged["info"]["model"] = animelib_item.contains("model") && animelib_item["model"].is_string()
-                    ? animelib_item["model"].get<std::string>() : ""; // Добавляем model из AniLib
-
-                // bookmark
-                merged["bookmark"]["status_shiki"] = shiki_item.contains("status") && shiki_item["status"].is_string()
-                    ? shiki_item["status"].get<std::string>() : "";
-                std::string shiki_status = shiki_item.contains("status") && shiki_item["status"].is_string()
-                    ? shiki_item["status"].get<std::string>() : "";
-                if (shiki_status == "completed") merged["bookmark"]["status_anilib"] = 24;
-                else if (shiki_status == "on_hold") merged["bookmark"]["status_anilib"] = 27;
-                else if (shiki_status == "rewatching") merged["bookmark"]["status_anilib"] = 26;
-                else if (shiki_status == "dropped") merged["bookmark"]["status_anilib"] = 23;
-                else if (shiki_status == "watching") merged["bookmark"]["status_anilib"] = 21;
-                else if (shiki_status == "planned") merged["bookmark"]["status_anilib"] = 22;
-                else merged["bookmark"]["status_anilib"] = 0;
-                merged["bookmark"]["progress"] = shiki_item.contains("episodes") && shiki_item["episodes"].is_number_integer()
-                    ? shiki_item["episodes"].get<int>() : 0;
-                merged["bookmark"]["episodes"] = animelib_item.contains("episodes") && animelib_item["episodes"].is_number_integer()
-                    ? animelib_item["episodes"].get<int>() : 0; //ядаун надафикс тут
-
-                // cover
-                if (animelib_item.contains("cover") && animelib_item["cover"].is_object()) 
-                {
-                    merged["cover"]["default"] = animelib_item["cover"].contains("default") && animelib_item["cover"]["default"].is_string()
-                        ? animelib_item["cover"]["default"].get<std::string>() : "";
-                    merged["cover"]["filename"] = animelib_item["cover"].contains("filename") && animelib_item["cover"]["filename"].is_string()
-                        ? animelib_item["cover"]["filename"].get<std::string>() : "";
-                    merged["cover"]["md"] = animelib_item["cover"].contains("md") && animelib_item["cover"]["md"].is_string()
-                        ? animelib_item["cover"]["md"].get<std::string>() : "";
-                    merged["cover"]["thumbnail"] = animelib_item["cover"].contains("thumbnail") && animelib_item["cover"]["thumbnail"].is_string()
-                        ? animelib_item["cover"]["thumbnail"].get<std::string>() : "";
-                } 
-                else 
-                {
-                    merged["cover"] = nlohmann::json::object();
-                }
-
-                result.push_back(merged);
-                found = true;
-                spdlog::debug("Anime found: {0}", target_title);
-                break;
-            }
-        }
-
-        if (!found) 
-        {
-            spdlog::debug("Anime not found in animelib: {0}", target_title);
-            not_found.push_back(shiki_item);
-        }
-    }
-
-    SaveNotFound(not_found);
-    spdlog::info("Merge completed. Found {0} out of {1} matches", result.size(), total_shikimori);
-    return result;
-}
-
-nlohmann::json Parser::MergeNotFound(const nlohmann::json& animelib_json, const nlohmann::json& not_found_json)
-{
-    nlohmann::json result = nlohmann::json::array();
-    nlohmann::json still_not_found = nlohmann::json::array();
-
-    if (not_found_json.empty() || !not_found_json.is_array()) 
-    {
-        spdlog::warn("Not found JSON is empty or not an array");
-        return result;
-    }
-
-    if (animelib_json.empty() || !animelib_json.is_array()) 
-    {
-        spdlog::warn("Animelib data is empty or not an array");
-        return result;
-    }
-
-    size_t total_not_found = not_found_json.size();
-
-    for (const auto& not_found_item : not_found_json) 
-    {
-        if (not_found_item.empty() || !not_found_item.is_object()) 
-        {
-            spdlog::warn("Invalid or empty object found in not_found data");
-            continue;
-        }
-
-        std::string target_title_ru;
-        if (not_found_item.contains("target_title_ru") && not_found_item["target_title_ru"].is_string()) 
-        {
-            target_title_ru = not_found_item["target_title_ru"].get<std::string>();
-        } 
-        else 
-        {
-            spdlog::warn("Not found object missing or invalid target_title_ru");
-            continue;
-        }
-
-        spdlog::debug("Searching for anime by Russian title: {0}", target_title_ru);
-
-        bool found = false;
-        for (const auto& animelib_item : animelib_json) 
-        {
-            if (!animelib_item.is_object() || animelib_item.empty()) 
-            {
-                spdlog::debug("Skipping invalid or empty object in animelib");
-                continue;
-            }
-
-            if (animelib_item.contains("rus_name") && animelib_item["rus_name"].is_string() && 
-                animelib_item["rus_name"].get<std::string>() == target_title_ru) 
-            {
-                nlohmann::json merged;
-
-                // title
-                merged["title"]["en"] = animelib_item.contains("eng_name") && animelib_item["eng_name"].is_string()
-                    ? animelib_item["eng_name"].get<std::string>() : "";
-                merged["title"]["ru"] = not_found_item.contains("target_title_ru") && not_found_item["target_title_ru"].is_string()
-                    ? not_found_item["target_title_ru"].get<std::string>() : "";
-
-                // info
-                merged["info"]["anilib_id"] = animelib_item.contains("id") && animelib_item["id"].is_number_integer()
-                    ? animelib_item["id"].get<int>() : 0;
-                merged["info"]["shiki_id"] = not_found_item.contains("target_id") && not_found_item["target_id"].is_number_integer()
-                    ? not_found_item["target_id"].get<int>() : 0;
-                merged["info"]["score"] = not_found_item.contains("score") && not_found_item["score"].is_number_integer()
-                    ? not_found_item["score"].get<int>() : 0;
-                merged["info"]["slug"] = animelib_item.contains("slug") && animelib_item["slug"].is_string()
-                    ? animelib_item["slug"].get<std::string>() : "";
-                merged["info"]["slug_url"] = animelib_item.contains("slug_url") && animelib_item["slug_url"].is_string()
-                    ? animelib_item["slug_url"].get<std::string>() : "";
-                merged["info"]["model"] = animelib_item.contains("model") && animelib_item["model"].is_string()
-                    ? animelib_item["model"].get<std::string>() : ""; 
-
-                // bookmark
-                merged["bookmark"]["status_shiki"] = not_found_item.contains("status") && not_found_item["status"].is_string()
-                    ? not_found_item["status"].get<std::string>() : "";
-                std::string shiki_status = not_found_item.contains("status") && not_found_item["status"].is_string()
-                    ? not_found_item["status"].get<std::string>() : "";
-                if (shiki_status == "completed") merged["bookmark"]["status_anilib"] = 24;
-                else if (shiki_status == "on_hold") merged["bookmark"]["status_anilib"] = 27;
-                else if (shiki_status == "rewatching") merged["bookmark"]["status_anilib"] = 26;
-                else if (shiki_status == "dropped") merged["bookmark"]["status_anilib"] = 23;
-                else if (shiki_status == "watching") merged["bookmark"]["status_anilib"] = 21;
-                else if (shiki_status == "planned") merged["bookmark"]["status_anilib"] = 22;
-                else merged["bookmark"]["status_anilib"] = 0;
-                merged["bookmark"]["progress"] = not_found_item.contains("episodes") && not_found_item["episodes"].is_number_integer()
-                    ? not_found_item["episodes"].get<int>() : 0;
-                merged["bookmark"]["episodes"] = animelib_item.contains("episodes") && animelib_item["episodes"].is_number_integer()
-                    ? animelib_item["episodes"].get<int>() : 0; // fix
-
-                // cover
-                if (animelib_item.contains("cover") && animelib_item["cover"].is_object()) 
-                {
-                    merged["cover"]["default"] = animelib_item["cover"].contains("default") && animelib_item["cover"]["default"].is_string()
-                        ? animelib_item["cover"]["default"].get<std::string>() : "";
-                    merged["cover"]["filename"] = animelib_item["cover"].contains("filename") && animelib_item["cover"]["filename"].is_string()
-                        ? animelib_item["cover"]["filename"].get<std::string>() : "";
-                    merged["cover"]["md"] = animelib_item["cover"].contains("md") && animelib_item["cover"]["md"].is_string()
-                        ? animelib_item["cover"]["md"].get<std::string>() : "";
-                    merged["cover"]["thumbnail"] = animelib_item["cover"].contains("thumbnail") && animelib_item["cover"]["thumbnail"].is_string()
-                        ? animelib_item["cover"]["thumbnail"].get<std::string>() : "";
-                } 
-                else 
-                {
-                    merged["cover"] = nlohmann::json::object();
-                }
-
-                result.push_back(merged);
-                found = true;
-                spdlog::debug("Anime found by Russian title: {0}", target_title_ru);
-                break;
-            }
-        }
-
-        if (!found) 
-        {
-            spdlog::debug("Anime still not found in animelib by Russian title: {0}", target_title_ru);
-            still_not_found.push_back(not_found_item);
-        }
-    }
-
-    SaveNotFound(still_not_found);
-    spdlog::info("MergeNotFound completed. Found {0} out of {1} matches", result.size(), total_not_found);
-    return result;
-}
-
-void Parser::SaveFile(const std::string file_name, const nlohmann::json& j)
+void Parser::SaveFile(const std::string file_name, const json& j)
 {
     if (file_name.empty()) 
     {
