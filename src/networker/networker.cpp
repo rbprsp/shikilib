@@ -117,63 +117,7 @@ nlohmann::json Networker::FetchAnimeLib()
 
 void Networker::AddToAnimeLibFromJson(const nlohmann::json& document) 
 {
-    if (!document.is_array()) 
-    {
-        spdlog::error("Document is not a JSON array");
-        return;
-    }
-
-    for (const auto& item : document) 
-    {
-        if (!item.is_object()) 
-        {
-            spdlog::warn("Skipping invalid element: not an object");
-            continue;
-        }
-
-        std::string slug_url;
-        int status_anilib = 0;
-        std::string media_type;
-
-        if (item.contains("info") && item["info"].contains("slug_url") && item["info"]["slug_url"].is_string())
-            slug_url = item["info"]["slug_url"].get<std::string>();
-        else 
-        {
-            spdlog::warn("Missing or invalid slug_url in object");
-            continue;
-        }
-
-        if (item.contains("bookmark") && item["bookmark"].contains("status_anilib") && item["bookmark"]["status_anilib"].is_number_integer()) 
-            status_anilib = item["bookmark"]["status_anilib"].get<int>();
-        else 
-        {
-            spdlog::warn("Missing or invalid status_anilib in object with slug_url: {}", slug_url);
-            continue;
-        }
-
-        if (item.contains("info") && item["info"].contains("model") && item["info"]["model"].is_string()) 
-            media_type = item["info"]["model"].get<std::string>();
-        else 
-        {
-            media_type = "anime";
-            spdlog::debug("No model found for slug_url: {}, using default media_type: anime", slug_url);
-        }
-
-        nlohmann::json request_body = {
-            {"media_type", media_type},
-            {"media_slug", slug_url},
-            {"bookmark", {{"status", status_anilib}}},
-            {"meta", nlohmann::json::object()}
-        };
-
-        std::string body_str = request_body.dump();
-
-        spdlog::info("Sending request for media_slug: {}, status: {}, media_type: {}", slug_url, status_anilib, media_type);
-
-        AddtoAnimeLib(body_str);
-    }
-
-    spdlog::info("Processing of all objects completed");
+    //TODO:
 }
 
 void Networker::AddtoAnimeLib(const std::string& body) 
