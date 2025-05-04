@@ -15,21 +15,22 @@ int main()
 #ifdef _WIN32
     system("chcp 65001 >nul");
 #endif
+    //Bearer
+    std::string input = "";
+    std::cout << "Token: ";
+    std::getline(std::cin, input);
+
+    //Fetch
     Networker n;
-    std::string input;
-    std::getline(std::cin, input);
-
-    std::cout << input << std::endl;
-    std::getline(std::cin, input);
     n.SetToken(input);
-
     json fetched = n.FetchAnimeLib();
 
+    //Parse &Merge
     Parser p;
     p.SaveFile("anilib.json", fetched);
     json anilib = p.ReadFile("anilib.json");
     json shiki  = p.ReadFile("shiki.json");
-    json merged = p.Merge(anilib["data"], shiki);
+    json merged = p.Merge(anilib, shiki);
     p.SaveFile("shikilib.json", merged);
 
     return 0;
