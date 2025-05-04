@@ -29,7 +29,7 @@ std::string Networker::PerformRequest(const std::string& url, const std::string&
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
         struct curl_slist* headers = nullptr;
 
-        headers = curl_slist_append(headers, "Host: api2.mangalib.me");
+        headers = curl_slist_append(headers, "Host: api.cdnlibs.org");
         headers = curl_slist_append(headers, "User-Agent: shikilib");
         headers = curl_slist_append(headers, "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         headers = curl_slist_append(headers, "Accept-Language: en-US,en;q=0.5");
@@ -131,10 +131,10 @@ void Networker::AddtoAnimeLib(const std::string& body)
     {
         std::string full_token = "Authorization: " + token;
 
-        curl_easy_setopt(curl, CURLOPT_URL, "https://api2.mangalib.me/api/bookmarks");
+        curl_easy_setopt(curl, CURLOPT_URL, "https://api.cdnlibs.org/api/bookmarks");
 
         struct curl_slist* headers = nullptr;
-        headers = curl_slist_append(headers, "Host: api2.mangalib.me");
+        headers = curl_slist_append(headers, "Host: api.cdnlibs.org");
         headers = curl_slist_append(headers, "User-Agent: shikilib");
         headers = curl_slist_append(headers, "Accept: */*");
         headers = curl_slist_append(headers, "Accept-Language: en-US,en;q=0.5");

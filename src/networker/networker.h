@@ -7,7 +7,7 @@ class Networker
 private: 
     int page = 1;
     bool fetch_active = true;
-    std::string request_url = "https://api2.mangalib.me/api/anime?fields[]=rate&fields[]=rate_avg&fields[]=userBookmark&site_id[]=5&page=";
+    std::string request_url = "https://api.cdnlibs.org/api/anime?fields[]=rate&fields[]=rate_avg&fields[]=userBookmark&site_id[]=5&page=";
     std::string token = "";
 
 private:
