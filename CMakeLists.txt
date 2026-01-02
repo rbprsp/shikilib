@@ -14,7 +14,11 @@ if(WIN32)
     string(APPEND CMAKE_CXX_FLAGS_RELEASE " /MT")
 
 elseif(UNIX)
-    #TODO:
+    # Linux/Unix specific settings
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
+    if(CMAKE_BUILD_TYPE STREQUAL "Release")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
+    endif()
 endif()
 
 project(${PROJECT_NAME}

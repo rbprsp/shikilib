@@ -34,6 +34,7 @@ public:
     void SaveFile(const std::string file_name, const json& j);
 
     json Merge(const json& animelib_json, const json& shikimori_json);
+    json GetNotSynced(const json &shikilib, const json &bookmarks);
 };
 
 #endif //!__PARSER_H__

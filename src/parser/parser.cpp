@@ -1,6 +1,7 @@
 #include "parser.h"
 #include <iostream>
 #include <fstream>
+#include <unordered_set>
 
 json Parser::Merge(const json& animelib_json, const json& shikimori_json)
 {
@@ -239,4 +240,90 @@ void Parser::SaveFile(const std::string file_name, const json &j)
     {
         spdlog::error("Error while saving file {}: {}", file_name, e.what());
     }
+}
+
+
+bool SearchById(int id, const json &shikilib)
+{
+    for(auto title : shikilib)
+    {
+        if(title["id"]["anilib"] == id)
+            return true;
+    }
+
+    return false;
+}
+
+json Parser::GetNotSynced(const json &shikilib, const json &bookmarks)
+{
+    json notsynced;
+    std::unordered_set<int> bookmark_ids;
+    int bookmark_valid = 0;
+    
+    for(const auto& bookmark : bookmarks["data"])
+    {
+        try
+        {
+            if(bookmark.contains("media") && bookmark["media"].contains("id"))
+            {
+                int id = bookmark["media"]["id"].get<int>();
+                bookmark_ids.insert(id);
+                bookmark_valid++;
+            }
+        }
+        catch(const std::exception& e)
+        {
+            spdlog::trace("Invalid bookmark entry: {}", e.what());
+        }
+    }
+    
+    int shiki_total = 0;
+    int shiki_valid = 0;
+    int found_in_bookmarks = 0;
+    int not_in_bookmarks = 0;
+    
+    std::vector<int> missing_ids;
+    
+    for(const auto& title : shikilib)
+    {
+        shiki_total++;
+        
+        try
+        {
+            if(!title.contains("id") || !title["id"].contains("anilib") ||
+               title["id"]["anilib"].is_null())
+                continue;
+            
+            int id = title["id"]["anilib"].get<int>();
+            shiki_valid++;
+            
+            if(bookmark_ids.find(id) != bookmark_ids.end())
+                found_in_bookmarks++;
+            else
+            {
+                not_in_bookmarks++;
+                missing_ids.push_back(id);
+                notsynced.push_back(title);
+
+                if(not_in_bookmarks <= 10)
+                {
+                    std::string title_name = "unknown";
+                    try {
+                        if(title.contains("info") && title["info"].contains("title"))
+                            title_name = title["info"]["title"].get<std::string>();
+                    } catch(...) {}
+                    
+                    spdlog::info("  Missing in Anilib - ID={}: {}", id, title_name);
+                }
+            }
+        }
+        catch(const std::exception& e)
+        {
+            spdlog::warn("Error processing shikilib entry #{}: {}", shiki_total, e.what());
+        }
+    }
+    
+
+    spdlog::debug("Not synced -> {0}", notsynced.size());
+    return notsynced;
 }
