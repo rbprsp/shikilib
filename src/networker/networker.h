@@ -28,4 +28,6 @@ public:
     nlohmann::json FilterMissingBookmarks(const nlohmann::json& shikilib_json, const nlohmann::json& existing_bookmarks);
 
     void AddToAnimeLibFromJson(const nlohmann::json& document);
+    void AddToAnimeLibBulk(const std::string& body);
+    void AddToAnimeLibFromJsonBulk(const nlohmann::json& document);
 };

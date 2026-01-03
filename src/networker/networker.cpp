@@ -44,7 +44,6 @@ std::string Networker::PerformRequest(const std::string& url, const std::string&
         headers = curl_slist_append(headers, "Referer: https://anilib.me/");
         headers = curl_slist_append(headers, "Site-Id: 5");
         headers = curl_slist_append(headers, "Content-Type: application/json");
-        headers = curl_slist_append(headers, "Client-Time-Zone: Asia/Almaty");
         headers = curl_slist_append(headers, "Origin: https://anilib.me");
         headers = curl_slist_append(headers, "DNT: 1");
         headers = curl_slist_append(headers, "Sec-GPC: 1");
@@ -169,20 +168,24 @@ nlohmann::json Networker::FetchBookmarks()
 int MapStatusToAnilibId(const std::string& status)
 {
     static const std::unordered_map<std::string, int> status_map = {
-        {"completed", 22},    // Просмотрено
-        {"watching", 21},     // Смотрю
-        {"planned", 23},      // Запланировано
-        {"on_hold", 24},      // Отложено
-        {"dropped", 25},      // Брошено
-        {"rewatching", 26}    // Пересматриваю
+        { "watching",   21 },
+        { "planned",    22 },
+        { "dropped",    23 },
+        { "completed",  24 },
+        { "rewatching", 26 },
+        { "on_hold",    27 }
     };
-    
+
     auto it = status_map.find(status);
     if (it != status_map.end())
+    {
         return it->second;
-    spdlog::warn("Unknown status '{}', defaulting to 'planned' (23)", status);
-    return 23; 
+    }
+
+    spdlog::warn("Unknown status '{}', defaulting to 'planned' (22)", status);
+    return 22;
 }
+
 
 void Networker::AddToAnimeLibFromJson(const nlohmann::json& document) 
 {
@@ -258,8 +261,6 @@ void Networker::AddToAnimeLibFromJson(const nlohmann::json& document)
                 anilib_id,
                 bookmark_body["bookmark"]["status"].get<int>());
 
-            spdlog::debug("Request body: {}", body_str);
-
             AddtoAnimeLib(body_str);
             processed++;
         }
@@ -278,6 +279,123 @@ void Networker::AddToAnimeLibFromJson(const nlohmann::json& document)
     spdlog::info("Total items: {}", total_items);
     spdlog::info("Processed: {}", processed);
 }
+
+void Networker::AddToAnimeLibFromJsonBulk(const nlohmann::json& document)
+{
+    if (!document.is_array())
+    {
+        spdlog::error("Invalid JSON format: expected array");
+        return;
+    }
+
+    std::unordered_map<int, std::vector<int>> bulk_map;
+
+    for (const auto& item : document)
+    {
+        try
+        {
+            int anilib_id = item.at("id").at("anilib").get<int>();
+            if (anilib_id <= 0)
+            {
+                spdlog::warn("Skipping item: invalid anilib id ({})", anilib_id);
+                continue;
+            }
+
+            std::string status_str = item.at("info").at("status").get<std::string>();
+            int status_id = MapStatusToAnilibId(status_str);
+
+            bulk_map[status_id].push_back(anilib_id);
+        }
+        catch (const std::exception& e)
+        {
+            spdlog::error("Error processing item: {}", e.what());
+        }
+    }
+
+    spdlog::info("Prepared {} bulk groups", bulk_map.size());
+
+    for (const auto& [status_id, ids] : bulk_map)
+    {
+        if (ids.empty())
+        {
+            continue;
+        }
+
+        nlohmann::json body;
+        body["media_type"] = "anime";
+        body["media_ids"] = ids;
+        body["status"] = status_id;
+
+        spdlog::info(
+            "Sending bulk request: status={}, items={}",
+            status_id,
+            ids.size()
+        );
+
+        AddToAnimeLibBulk(body.dump());
+    }
+}
+
+void Networker::AddToAnimeLibBulk(const std::string& body)
+{
+    CURL* curl = curl_easy_init();
+    if (!curl)
+    {
+        spdlog::error("Failed to initialize CURL");
+        return;
+    }
+
+    std::string response;
+    long response_code = 0;
+
+    curl_easy_setopt(curl, CURLOPT_URL, "https://api.cdnlibs.org/api/bookmarks/bulk");
+    curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "PUT");
+    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, body.c_str());
+    curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, body.size());
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
+    curl_easy_setopt(curl, CURLOPT_ACCEPT_ENCODING, "");
+
+    struct curl_slist* headers = nullptr;
+    headers = curl_slist_append(headers, "Host: api.cdnlibs.org");
+    headers = curl_slist_append(headers, "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:146.0) Gecko/20100101 Firefox/146.0");
+    headers = curl_slist_append(headers, "Accept: */*");
+    headers = curl_slist_append(headers, "Accept-Language: en-US,en;q=0.5");
+    headers = curl_slist_append(headers, "Content-Type: application/json");
+    headers = curl_slist_append(headers, "Referer: https://anilib.me/");
+    headers = curl_slist_append(headers, "Site-Id: 5");
+    headers = curl_slist_append(headers, "Client-Time-Zone: Asia/Almaty");
+    headers = curl_slist_append(headers, "Origin: https://anilib.me");
+    headers = curl_slist_append(headers, "DNT: 1");
+    headers = curl_slist_append(headers, "Sec-GPC: 1");
+    headers = curl_slist_append(headers, "Connection: keep-alive");
+
+    if (!token.empty())
+    {
+        std::string auth = "Authorization: Bearer " + token;
+        headers = curl_slist_append(headers, auth.c_str());
+    }
+
+    curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+
+    CURLcode res = curl_easy_perform(curl);
+    curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &response_code);
+
+    if (res != CURLE_OK)
+    {
+        spdlog::error(
+            "Bulk request failed: {} (HTTP {})",
+            curl_easy_strerror(res),
+            response_code
+        );
+    }
+    else
+        spdlog::info("Bulk request success, HTTP {}", response_code);
+
+    curl_slist_free_all(headers);
+    curl_easy_cleanup(curl);
+}
+
 
 void Networker::AddtoAnimeLib(const std::string& body) 
 {
@@ -299,7 +417,6 @@ void Networker::AddtoAnimeLib(const std::string& body)
         headers = curl_slist_append(headers, "Referer: https://anilib.me/");
         headers = curl_slist_append(headers, "Site-Id: 5");
         headers = curl_slist_append(headers, "Content-Type: application/json");
-        headers = curl_slist_append(headers, "Client-Time-Zone: Asia/Almaty");
         headers = curl_slist_append(headers, "Origin: https://anilib.me");
         headers = curl_slist_append(headers, "DNT: 1");
         headers = curl_slist_append(headers, "Sec-GPC: 1");
@@ -328,7 +445,7 @@ void Networker::AddtoAnimeLib(const std::string& body)
         if (res != CURLE_OK) 
             spdlog::error("Request failed with error: {}. Response code: {}", curl_easy_strerror(res), response_code);
         else 
-            spdlog::info("Request completed. Response code: {}. Response: {}", response_code, response);
+            spdlog::info("Response code -> {0}", response_code);
 
         curl_slist_free_all(headers);
         curl_easy_cleanup(curl);
@@ -337,10 +454,10 @@ void Networker::AddtoAnimeLib(const std::string& body)
         spdlog::error("Failed to initialize CURL. Response code: {}", response_code);
 
     request_counter++;
-    if (request_counter > 0 && request_counter % 15 == 0)
+    if (request_counter > 0 && request_counter < 30)
     {
-        spdlog::info("Выполнено {} запросов. Ожидание 30 секунд для предотвращения timeout...", request_counter);
-        std::this_thread::sleep_for(std::chrono::seconds(15));
-        spdlog::info("Продолжение работы после задержки");
+        spdlog::info("Выполнено {} запросов. Ожидание 10 секунд для предотвращения timeout...", request_counter);
+        std::this_thread::sleep_for(std::chrono::seconds(10));
+        request_counter = 0;
     }
 }
