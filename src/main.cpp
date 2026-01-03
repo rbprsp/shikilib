@@ -63,7 +63,8 @@ int main()
         std::cout << "2. Fetch anilib bookmarks"  << std::endl;
         std::cout << "3. Merge shiki & anilib bookmarks" << std::endl;
         std::cout << "4. Get not synced" << std::endl;
-        std::cout << "5. Add bookmarks to anilib" << std::endl;
+        std::cout << "5. Add bookmarks to anilib bulk (not working prop)" << std::endl;
+        std::cout << "6. Add bookmarks to anilib" << std::endl;
         std::cout << "9. Exit" << std::endl;
 
         std::cout << ">> ";
@@ -84,6 +85,9 @@ int main()
             p.SaveFile("notsynced.json", p.GetNotSynced(p.ReadFile("shikilib.json"), p.ReadFile("anilibmarks.json")));
             break;
         case 5:
+            n.AddToAnimeLibFromJsonBulk(p.ReadFile("notsynced.json"));
+            break;
+        case 6:
             n.AddToAnimeLibFromJson(p.ReadFile("notsynced.json"));
             break;
         default:
