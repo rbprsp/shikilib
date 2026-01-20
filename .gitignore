@@ -1,14 +1,10 @@
-### FOLDERS
-
+# ---- FOLDERS --------------
 build/
 bin/
 .vscode/
 vscode/
 .vs/
 vs/
+.cache
 
-### FILES
-
-token.txt
-bookmarks.json
-missing_bookmarks.json
+# ---- FILES ----------------
