@@ -6,7 +6,6 @@
 #include "anilib/catalog/catalog.h"
 #include "anilib/utils/utils.h"
 #include "networker/networker.h"
-#include "parser/parser.h"
 
 #include <spdlog/spdlog.h>
 
