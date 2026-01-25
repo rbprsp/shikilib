@@ -3,14 +3,14 @@
 
 #include <string>
 
-struct Meta
+struct BaseMeta
 {
     std::string seed{};
 };
 
 struct Root
 {
-    Meta meta{};
+    BaseMeta meta{};
 };
 
 namespace ANILIB
