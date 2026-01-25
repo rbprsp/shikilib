@@ -33,7 +33,7 @@ int main()
 
     Catalog c(token);
 
-    c.ParsePage(1);
+    c.SyncPages();
 
     return 0;
 }
