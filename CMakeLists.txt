@@ -10,19 +10,6 @@ project(${PROJECT_NAME}
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-if(WIN32)
-    if(DEFINED ENV{VCPKG_ROOT})
-        set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
-    else()
-        message(FATAL_ERROR "Please set VCPKG_ROOT environment variable on Windows")
-    endif()
-elseif(UNIX)
-    add_compile_options(-Wall -Wextra)
-    if(CMAKE_BUILD_TYPE STREQUAL "Release")
-        add_compile_options(-O3)
-    endif()
-endif()
-
 include(FetchContent)
 
 # ---- GLAZE -----------------------
@@ -73,6 +60,7 @@ add_executable(${PROJECT_NAME}
     src/anilib/utils/utils.cpp
     src/anilib/catalog/catalog.h # templates huh
     src/anilib/catalog/catalog.cpp
+    src/db/db.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE src/)
