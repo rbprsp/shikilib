@@ -1,4 +1,4 @@
-# DokiSync
+# DokiDoki
 
 **Sync between multiple anime watch & track platforms**
 
@@ -24,14 +24,13 @@ Current status: **early development**
 #### Prerequisites
 
 - CMake 3.21+
-- C++20 capable compiler (GCC 11+, Clang 13+, MSVC 2019+)
 - Git
 
 #### Build
 
 ```bash
-git clone https://github.com/rbprsp/shikilib.git
-cd shikilib
+git clone https://github.com/rbprsp/dokidoki.git
+cd dokidoki
 
 mkdir build && cd build
 cmake ..
