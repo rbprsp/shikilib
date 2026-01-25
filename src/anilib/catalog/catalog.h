@@ -51,13 +51,17 @@ struct UserBookmarkMeta
     bool comment{};
     std::optional<int> rewatches;
     std::optional<int> item_number;
+    std::optional<std::string> player;
+    std::optional<int> team;
+    std::optional<int> translation_type;
 
     struct glaze
     {
         using T = UserBookmarkMeta;
 
         static constexpr auto value =
-            glz::object("comment", &T::comment, "rewatches", &T::rewatches, "item_number", &T::item_number);
+            glz::object("comment", &T::comment, "rewatches", &T::rewatches, "item_number", &T::item_number, "player",
+                        &T::player, "team", &T::team, "translation_type", &T::translation_type);
     };
 };
 
@@ -68,7 +72,7 @@ struct UserBookmark
     int media_id{};
 
     std::optional<int> item_id;
-    std::optional<int> progress;
+    std::optional<std::string> progress;
 
     int status{};
 
@@ -138,7 +142,7 @@ struct PaginationLinks
     };
 };
 
-struct PaginationMeta
+struct Meta
 {
     int current_page{};
     std::optional<int> from;
@@ -149,7 +153,7 @@ struct PaginationMeta
 
     struct glaze
     {
-        using T = PaginationMeta;
+        using T = Meta;
         static constexpr auto value = glz::object("current_page", &T::current_page, "from", &T::from, "path", &T::path,
                                                   "per_page", &T::per_page, "to", &T::to, "seed", &T::seed);
     };
@@ -159,7 +163,7 @@ struct AnilibResponse
 {
     std::vector<AnimeItem> data;
     PaginationLinks links;
-    PaginationMeta meta;
+    Meta meta;
 
     struct glaze
     {
@@ -177,8 +181,18 @@ private:
     std::string base_url =
         "https://api.cdnlibs.org/api/anime?fields[]=rate&fields[]=rate_avg&fields[]=userBookmark&site_id[]=5";
 
+    /// @brief  Max titles per one page
+    const size_t MAX_TITLES = 60;
+
+    void ParseNetwork(AnilibResponse &anilib, int page);
+    void ParseLocal(AnilibResponse &anilib, int page);
+
 public:
     Catalog(std::string token);
 
     AnilibResponse ParsePage(int page);
+
+    std::vector<AnilibResponse> ParsePages();
+
+    void SyncPages();
 };
