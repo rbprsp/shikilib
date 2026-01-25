@@ -55,7 +55,6 @@ FetchContent_MakeAvailable(sqlite_orm)
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
-    src/parser/parser.cpp
     src/networker/networker.cpp
     src/anilib/utils/utils.cpp
     src/anilib/catalog/catalog.h # templates huh
