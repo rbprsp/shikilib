@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.21)
 set(PROJECT_NAME "dokidoki")
 project(${PROJECT_NAME}
     VERSION 1.0.0
-    LANGUAGES CXX
+    LANGUAGES C CXX
     DESCRIPTION "Sync between multiple anime watch & track platforms"
 )
 
@@ -56,10 +56,13 @@ FetchContent_MakeAvailable(sqlite_orm)
 add_executable(${PROJECT_NAME}
     src/main.cpp
     src/networker/networker.cpp
-    src/anilib/utils/utils.cpp
-    src/anilib/catalog/catalog.h # templates huh
+    src/utils/utils.cpp
+    src/models/anilib.h
+    src/models/shiki.h
     src/anilib/catalog/catalog.cpp
     src/db/db.cpp
+    src/db/db.h
+    src/shiki/list/shiki_list.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE src/)
