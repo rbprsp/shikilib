@@ -4,8 +4,9 @@
 #include <spdlog/spdlog.h>
 
 #include "anilib/catalog/catalog.h"
-#include "anilib/utils/utils.h"
 #include "networker/networker.h"
+#include "shiki/list/shiki_list.h"
+#include "utils/utils.h"
 
 #include <spdlog/spdlog.h>
 
@@ -17,7 +18,7 @@ int main()
 #ifdef _WIN32
     system("chcp 65001 >nul");
 #endif
-
+    /*
     Networker n;
     std::string token;
 
@@ -33,6 +34,9 @@ int main()
     Catalog c(token);
 
     c.SyncPages();
+    */
 
+    ShikiData sd;
+    sd.CreateDB();
     return 0;
 }
