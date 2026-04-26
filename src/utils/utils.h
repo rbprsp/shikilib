@@ -1,11 +1,11 @@
-#ifndef __ANILIB_UTILS_H__
-#define __ANILIB_UTILS_H__
+#ifndef ANILIB_UTILS_H
+#define ANILIB_UTILS_H
 
 #include <string>
 
 struct BaseMeta
 {
-    std::string seed{};
+    std::string seed;
 };
 
 struct Root
@@ -13,7 +13,7 @@ struct Root
     BaseMeta meta{};
 };
 
-namespace ANILIB
+namespace anilib
 {
     class Utils
     {
@@ -21,6 +21,6 @@ namespace ANILIB
     public:
         static std::string GetSeed(const std::string &text);
     };
-} // namespace ANILIB
+} // namespace anilib
 
 #endif
