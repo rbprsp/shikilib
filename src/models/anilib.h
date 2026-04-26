@@ -1,5 +1,5 @@
-#ifndef __ANILIB_MODELS_H__
-#define __ANILIB_MODELS_H__
+#ifndef ANILIB_MODELS_H
+#define ANILIB_MODELS_H
 
 #include <glaze/glaze.hpp>
 #include <optional>
@@ -10,7 +10,7 @@ struct Cover
 {
     std::optional<std::string> filename;
     std::string thumbnail;
-    std::string default_;
+    std::string default_img;
     std::string md;
 
     struct glaze
@@ -18,35 +18,52 @@ struct Cover
         using T = Cover;
 
         static constexpr auto value =
-            glz::object("filename", &T::filename, "thumbnail", &T::thumbnail, "default", &T::default_, "md", &T::md);
+            glz::object("filename", &T::filename, "thumbnail", &T::thumbnail, "default", &T::default_img, "md", &T::md);
     };
 };
 
 struct AgeRestriction
 {
     int id{};
-    std::string label{};
+    std::string label;
+};
+
+struct EmptyType
+{
+    struct glaze
+    {
+        using T = EmptyType;
+        static constexpr auto value = glz::array();
+    };
 };
 
 struct Type
 {
     int id{};
-    std::string label{};
+    std::string label;
 };
 
 struct Rating
 {
     std::string average;
-    std::string averageFormated;
-    int votes{};
-    std::string votesFormated;
-    int user{};
+    std::string average_formated;
+    std::optional<int> votes;
+    std::optional<std::string> votes_formated;
+    std::optional<int> user;
+
+    struct glaze
+    {
+        using T = Rating;
+        static constexpr auto value =
+            glz::object("average", &T::average, "averageFormated", &T::average_formated, "votes", &T::votes,
+                        "votesFormated", &T::votes_formated, "user", &T::user);
+    };
 };
 
 struct Status
 {
     int id{};
-    std::string label{};
+    std::string label;
 };
 
 struct UserBookmarkMeta
@@ -98,34 +115,35 @@ struct AnimeItem
 {
     int id{};
     std::string name;
-    std::string rus_name;
+    std::optional<std::string> rus_name;
     std::optional<std::string> eng_name;
     std::string model;
     std::string slug;
     std::string slug_url;
 
     Cover cover;
-    AgeRestriction ageRestriction;
+    AgeRestriction age_restriction;
     int site{};
-    Type type;
+    std::variant<Type, EmptyType> type;
     Rating rating;
 
-    std::optional<UserBookmark> userBookmark;
-    std::vector<glz::generic> content_marking;
+    std::optional<UserBookmark> user_bookmark;
+    std::vector<std::string> content_marking;
     Status status;
 
-    std::string releaseDateString;
+    std::string release_date_string;
     std::optional<std::string> shiki_rate;
+    std::optional<std::string> anilist_id;
 
     struct glaze
     {
         using T = AnimeItem;
-        static constexpr auto value =
-            glz::object("id", &T::id, "name", &T::name, "rus_name", &T::rus_name, "eng_name", &T::eng_name, "model",
-                        &T::model, "slug", &T::slug, "slug_url", &T::slug_url, "cover", &T::cover, "ageRestriction",
-                        &T::ageRestriction, "site", &T::site, "type", &T::type, "rating", &T::rating, "userBookmark",
-                        &T::userBookmark, "content_marking", &T::content_marking, "status", &T::status,
-                        "releaseDateString", &T::releaseDateString, "shiki_rate", &T::shiki_rate);
+        static constexpr auto value = glz::object(
+            "id", &T::id, "name", &T::name, "rus_name", &T::rus_name, "eng_name", &T::eng_name, "model", &T::model,
+            "slug", &T::slug, "slug_url", &T::slug_url, "cover", &T::cover, "ageRestriction", &T::age_restriction,
+            "site", &T::site, "type", &T::type, "rating", &T::rating, "userBookmark", &T::user_bookmark,
+            "content_marking", &T::content_marking, "status", &T::status, "releaseDateString", &T::release_date_string,
+            "shiki_rate", &T::shiki_rate, "anilist_id", &T::anilist_id);
     };
 };
 

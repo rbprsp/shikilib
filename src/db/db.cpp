@@ -22,7 +22,7 @@ template class BaseDB<Mapping, MappingStorage>;
 AnilibDB::AnilibDB(const std::string &db_path)
     : BaseDB(orm::make_storage(
           db_path, orm::make_table(
-                       "anime", orm::make_column("id", &Anime::id), orm::make_column("name", &Anime::name),
+                       "anime", orm::make_column("id", &Anime::id, orm::primary_key()), orm::make_column("name", &Anime::name),
                        orm::make_column("rus_name", &Anime::rus_name), orm::make_column("eng_name", &Anime::eng_name),
                        orm::make_column("type", &Anime::type), orm::make_column("slug", &Anime::slug),
                        orm::make_column("slug_url", &Anime::slug_url), orm::make_column("shiki_id", &Anime::shiki_id),
@@ -48,9 +48,28 @@ ShikiDB::ShikiDB(const std::string &db_path)
 }
 
 MappingDB::MappingDB(const std::string &db_path)
-    : BaseDB(orm::make_storage(db_path, orm::make_table("anime", orm::make_column("name", &Mapping::name),
-                                                        orm::make_column("shiki_id", &Mapping::shiki_id),
-                                                        orm::make_column("anilib_id", &Mapping::anilib_id))))
+    : BaseDB(orm::make_storage(
+          db_path,
+          orm::make_table("mapping", orm::make_column("shiki_id", &Mapping::shiki_id, orm::primary_key()),
+                          orm::make_column("anilib_id", &Mapping::anilib_id),
+                          orm::make_column("anilist_id", &Mapping::anilist_id),
+                          orm::make_column("name", &Mapping::name),
+                          orm::make_column("confidence", &Mapping::confidence),
+                          orm::make_column("verified", &Mapping::verified),
+                          orm::make_column("created_at", &Mapping::created_at))))
 {
     storage.sync_schema();
+}
+
+std::optional<Mapping> MappingDB::FindByShikiId(int shiki_id)
+{
+    auto p = storage.get_pointer<Mapping>(shiki_id);
+    if (!p)
+        return std::nullopt;
+    return *p;
+}
+
+void MappingDB::Upsert(const Mapping &m)
+{
+    storage.replace(m);
 }

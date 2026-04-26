@@ -16,8 +16,8 @@ std::vector<ShikiList> ShikiData::ReadFile()
         spdlog::error(glz::format_error(ec, file_data));
         return {};
     }
-    else
-        return data;
+
+    return data;
 }
 
 // diff from <anilib/catalog/catalog.cpp>

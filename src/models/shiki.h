@@ -1,5 +1,5 @@
-#ifndef __SHIKI_MODELS_H__
-#define __SHIKI_MODELS_H__
+#ifndef SHIKI_MODELS_H
+#define SHIKI_MODELS_H
 
 #include <glaze/glaze.hpp>
 #include <optional>

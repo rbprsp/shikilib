@@ -1,10 +1,9 @@
-#ifndef __SHIKI_LIST_H__
-#define __SHIKI_LIST_H__
+#ifndef SHIKI_LIST_H
+#define SHIKI_LIST_H
 
 #include "models/shiki.h"
 
 #include <glaze/glaze.hpp>
-#include <optional>
 #include <string>
 #include <vector>
 
