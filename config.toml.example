@@ -1,0 +1,17 @@
+# DokiDoki Configuration
+
+[anilib]
+api_token = "your_anilib_token_here"
+host_url = "hapi.hentaicdn.org"
+
+[shikimori]
+client_id = "your_shikimori_client_id"
+client_secret = "your_shikimori_client_secret"
+redirect_uri = ""
+user_agent = ""
+
+[database]
+path = "dokidoki.db"
+
+[logging]
+level = "info"
