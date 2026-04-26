@@ -9,60 +9,74 @@ project(${PROJECT_NAME}
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include(FetchContent)
 
+set(GIT_SSL_NO_VERIFY ON CACHE BOOL "" FORCE)
+set(FETCHCONTENT_QUIET OFF)
+
 # ---- GLAZE -----------------------
-FetchContent_Declare(
-  glaze
-  GIT_REPOSITORY https://github.com/stephenberry/glaze.git
-  GIT_TAG main
-  GIT_SHALLOW TRUE
-)
-FetchContent_MakeAvailable(glaze)
+find_package(glaze QUIET)
+if(NOT glaze_FOUND)
+  fetchcontent_declare(
+        glaze
+        GIT_REPOSITORY https://github.com/stephenberry/glaze.git
+        GIT_TAG main
+    )
+  fetchcontent_makeavailable(glaze)
+endif()
 
 # ---- CPR -------------------------
-FetchContent_Declare(
-    cpr 
+fetchcontent_declare(
+    cpr
     GIT_REPOSITORY https://github.com/libcpr/cpr.git
     GIT_TAG master
 )
-FetchContent_MakeAvailable(cpr)
+fetchcontent_makeavailable(cpr)
+
+find_package(CURL REQUIRED)
 
 # ---- SPDLOG ----------------------
-FetchContent_Declare(
-    spdlog
-    GIT_REPOSITORY https://github.com/gabime/spdlog.git
-    GIT_TAG v1.x
-)
-FetchContent_MakeAvailable(spdlog)
+find_package(spdlog QUIET)
+if(NOT spdlog_FOUND)
+  fetchcontent_declare(
+        spdlog
+        GIT_REPOSITORY https://github.com/gabime/spdlog.git
+        GIT_TAG v1.x
+    )
+  fetchcontent_makeavailable(spdlog)
+endif()
 
 # ---- SQLITE3 ---------------------
-FetchContent_Declare(
-    sqlite3
-    GIT_REPOSITORY https://github.com/sjinks/sqlite3-cmake
-    GIT_TAG master
-)
-FetchContent_MakeAvailable(sqlite3)
+find_package(SQLite3 REQUIRED)
 
 # ---- SQLITE-ORM ------------------
-FetchContent_Declare(
+fetchcontent_declare(
     sqlite_orm
     GIT_REPOSITORY https://github.com/fnc12/sqlite_orm.git
     GIT_TAG master
 )
-FetchContent_MakeAvailable(sqlite_orm)
+fetchcontent_makeavailable(sqlite_orm)
+
+# ---- TOML11 -----------------------
+fetchcontent_declare(
+    toml11
+    GIT_REPOSITORY https://github.com/ToruNiina/toml11.git
+    GIT_TAG v4.4.0
+)
+fetchcontent_makeavailable(toml11)
 
 add_executable(${PROJECT_NAME}
-    src/main.cpp
-    src/networker/networker.cpp
-    src/utils/utils.cpp
-    src/models/anilib.h
-    src/models/shiki.h
-    src/anilib/catalog/catalog.cpp
-    src/db/db.cpp
-    src/db/db.h
-    src/shiki/list/shiki_list.cpp
+    "src/main.cpp"
+    "src/config/config.cpp"
+    "src/networker/networker.cpp"
+    "src/utils/utils.cpp"
+    "src/anilib/auth/auth.cpp"
+    "src/anilib/catalog/catalog.cpp"
+    "src/db/db.cpp"
+    "src/shiki/list/shiki_list.cpp"
+    "src/mapping/resolver.cpp"
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE src/)
@@ -71,6 +85,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     spdlog::spdlog_header_only
     cpr::cpr
     glaze::glaze
-    SQLite::SQLite3
-    sqlite_orm 
+    SQLite3::SQLite3
+    sqlite_orm
+    toml11::toml11
 )

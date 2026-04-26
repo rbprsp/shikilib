@@ -1,10 +1,15 @@
 # ---- FOLDERS --------------
 build/
+build-debug/
+build-release/
 bin/
 .vscode/
 vscode/
 .vs/
 vs/
-.cache
+.cache/
+.zed/
 
 # ---- FILES ----------------
+config.toml
+*.db
