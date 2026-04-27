@@ -48,9 +48,9 @@ The first run dumps every page of your AniLib catalog into `pages/*.json` and wr
 
 # TODO
 
-- [✓] The mapping resolver.
-- [x] cli commands
-- [x] flutter ui
+- [x] The mapping resolver.
+- [ ] cli commands
+- [ ] flutter ui
 
 # Why
 
