@@ -74,9 +74,11 @@ add_executable(${PROJECT_NAME}
     "src/utils/utils.cpp"
     "src/anilib/auth/auth.cpp"
     "src/anilib/catalog/catalog.cpp"
+    "src/anilib/sync/sync.cpp"
     "src/db/db.cpp"
     "src/shiki/list/shiki_list.cpp"
     "src/mapping/resolver.cpp"
+    "src/mapping/diff.cpp"
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE src/)
@@ -89,3 +91,21 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     sqlite_orm
     toml11::toml11
 )
+
+option(DOKI_BUILD_TESTS "Build unit tests" OFF)
+
+if(DOKI_BUILD_TESTS)
+    # ---- CATCH2 ----------------------
+    find_package(Catch2 3 QUIET)
+    if(NOT Catch2_FOUND)
+        fetchcontent_declare(
+            Catch2
+            GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+            GIT_TAG v3.5.4
+        )
+        fetchcontent_makeavailable(Catch2)
+    endif()
+
+    enable_testing()
+    add_subdirectory(tests)
+endif()

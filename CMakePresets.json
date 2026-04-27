@@ -3,20 +3,30 @@
   "configurePresets": [
     {
       "name": "release",
-      "displayName": "Ninja Release",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build",
+      "displayName": "Release",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release"
       }
     },
     {
       "name": "debug",
-      "displayName": "Ninja Debug",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build-debug",
+      "displayName": "Debug",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "test",
+      "displayName": "Tests",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "DOKI_BUILD_TESTS": "ON"
       }
     }
   ],
@@ -28,6 +38,24 @@
     {
       "name": "debug",
       "configurePreset": "debug"
+    },
+    {
+      "name": "test",
+      "configurePreset": "test",
+      "targets": ["doki_tests"]
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "test",
+      "configurePreset": "test",
+      "output": {
+        "outputOnFailure": true
+      },
+      "execution": {
+        "noTestsAction": "error",
+        "stopOnFailure": false
+      }
     }
   ]
 }
