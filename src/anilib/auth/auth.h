@@ -10,16 +10,20 @@ class AnilibClient
 private:
     std::string token;
     std::string host;
+    std::string user_id;
 
+    [[nodiscard]] Networker::Headers BuildHeaders() const;
     void ValidateToken();
 
 public:
-    AnilibClient(std::string token, std::string host);
+    AnilibClient(std::string token, std::string host, std::string user_id);
 
-    Networker::Response Get(const std::string &url) const;
+    [[nodiscard]] Networker::Response Get(const std::string &url) const;
+    [[nodiscard]] Networker::Response Post(const std::string &url, const std::string &body) const;
 
-    const std::string &Token() const;
-    const std::string &Host() const;
+    [[nodiscard]] const std::string &Token() const noexcept;
+    [[nodiscard]] const std::string &Host() const noexcept;
+    [[nodiscard]] const std::string &UserId() const noexcept;
 };
 
 #endif

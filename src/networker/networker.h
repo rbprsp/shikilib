@@ -19,14 +19,12 @@ public:
 
     struct Response
     {
-        int code;
+        int code{};
         std::string text;
     };
 
-    static Response Request(Method method, const std::string &url, const Headers &headers = {},
-                            const std::string &body = "");
-
-    static Response PerformRequest(const std::string &url, const std::string &token, const std::string &host);
+    [[nodiscard]] static Response Request(Method method, const std::string &url, const Headers &headers = {},
+                                          const std::string &body = {});
 };
 
 #endif
