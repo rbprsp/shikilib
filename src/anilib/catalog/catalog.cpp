@@ -130,6 +130,7 @@ void Catalog::SyncPages()
                     a.eng_name = item.eng_name.value_or("");
                     a.slug = item.slug;
                     a.slug_url = item.slug_url;
+                    a.model = item.model;
 
                     if (const auto* t = std::get_if<Type>(&item.type))
                         a.type = t->label;

@@ -5,7 +5,6 @@
 #include "models/shiki.h"
 
 #include <sqlite_orm/sqlite_orm.h>
-#include <optional>
 #include <string>
 
 namespace orm = sqlite_orm;
@@ -17,6 +16,7 @@ using AnilibStorage = decltype(orm::make_storage(
                     orm::make_column("rus_name", &Anime::rus_name),
                     orm::make_column("eng_name", &Anime::eng_name),
                     orm::make_column("type", &Anime::type),
+                    orm::make_column("model", &Anime::model),
                     orm::make_column("slug", &Anime::slug),
                     orm::make_column("slug_url", &Anime::slug_url),
                     orm::make_column("shiki_id", &Anime::shiki_id),
@@ -42,12 +42,19 @@ using MappingStorage = decltype(orm::make_storage(
     orm::make_table("mapping", orm::make_column("shiki_id", &Mapping::shiki_id, orm::primary_key()),
                     orm::make_column("anilib_id", &Mapping::anilib_id),
                     orm::make_column("anilist_id", &Mapping::anilist_id),
-                    orm::make_column("name", &Mapping::name),
-                    orm::make_column("confidence", &Mapping::confidence),
-                    orm::make_column("verified", &Mapping::verified),
-                    orm::make_column("created_at", &Mapping::created_at))));
+                    orm::make_column("name", &Mapping::name))));
 
-template <typename T, typename Storage> class BaseDB {
+using BookmarkStorage = decltype(orm::make_storage(
+    std::declval<std::string>(),
+    orm::make_table("bookmarks",
+                    orm::make_column("media_id", &Bookmark::media_id, orm::primary_key()),
+                    orm::make_column("status", &Bookmark::status),
+                    orm::make_column("created_at", &Bookmark::created_at),
+                    orm::make_column("updated_at", &Bookmark::updated_at),
+                    orm::make_column("rewatches", &Bookmark::rewatches))));
+
+template <typename T, typename Storage> class BaseDB
+{
 public:
   explicit BaseDB(Storage &&storage_instance);
 
@@ -58,22 +65,28 @@ protected:
   Storage storage;
 };
 
-class AnilibDB : public BaseDB<Anime, AnilibStorage> {
+class AnilibDB : public BaseDB<Anime, AnilibStorage>
+{
 public:
   explicit AnilibDB(const std::string &db_path);
 };
 
-class ShikiDB : public BaseDB<ShikiList, ShikiStorage> {
+class ShikiDB : public BaseDB<ShikiList, ShikiStorage>
+{
 public:
   explicit ShikiDB(const std::string &db_path);
 };
 
-class MappingDB : public BaseDB<Mapping, MappingStorage> {
+class MappingDB : public BaseDB<Mapping, MappingStorage>
+{
 public:
   explicit MappingDB(const std::string &db_path);
+};
 
-  std::optional<Mapping> FindByShikiId(int shiki_id);
-  void Upsert(const Mapping &m);
+class BookmarkDB : public BaseDB<Bookmark, BookmarkStorage>
+{
+public:
+  explicit BookmarkDB(const std::string &db_path);
 };
 
 #endif

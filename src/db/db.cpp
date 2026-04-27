@@ -18,13 +18,15 @@ template <typename T, typename Storage> const Storage &BaseDB<T, Storage>::GetSt
 template class BaseDB<Anime, AnilibStorage>;
 template class BaseDB<ShikiList, ShikiStorage>;
 template class BaseDB<Mapping, MappingStorage>;
+template class BaseDB<Bookmark, BookmarkStorage>;
 
 AnilibDB::AnilibDB(const std::string &db_path)
     : BaseDB(orm::make_storage(
           db_path, orm::make_table(
                        "anime", orm::make_column("id", &Anime::id, orm::primary_key()), orm::make_column("name", &Anime::name),
                        orm::make_column("rus_name", &Anime::rus_name), orm::make_column("eng_name", &Anime::eng_name),
-                       orm::make_column("type", &Anime::type), orm::make_column("slug", &Anime::slug),
+                       orm::make_column("type", &Anime::type), orm::make_column("model", &Anime::model),
+                       orm::make_column("slug", &Anime::slug),
                        orm::make_column("slug_url", &Anime::slug_url), orm::make_column("shiki_id", &Anime::shiki_id),
                        orm::make_column("shiki_name", &Anime::shiki_name),
                        orm::make_column("shiki_status", &Anime::shiki_status),
@@ -48,28 +50,32 @@ ShikiDB::ShikiDB(const std::string &db_path)
 }
 
 MappingDB::MappingDB(const std::string &db_path)
-    : BaseDB(orm::make_storage(
+    : BaseDB(
+        orm::make_storage
+        (
           db_path,
-          orm::make_table("mapping", orm::make_column("shiki_id", &Mapping::shiki_id, orm::primary_key()),
+          orm::make_table
+          ("mapping",
+                          orm::make_column("shiki_id", &Mapping::shiki_id, orm::primary_key()),
                           orm::make_column("anilib_id", &Mapping::anilib_id),
                           orm::make_column("anilist_id", &Mapping::anilist_id),
-                          orm::make_column("name", &Mapping::name),
-                          orm::make_column("confidence", &Mapping::confidence),
-                          orm::make_column("verified", &Mapping::verified),
-                          orm::make_column("created_at", &Mapping::created_at))))
+                          orm::make_column("name", &Mapping::name)
+          )
+        )
+    )
 {
     storage.sync_schema();
 }
 
-std::optional<Mapping> MappingDB::FindByShikiId(int shiki_id)
+BookmarkDB::BookmarkDB(const std::string &db_path)
+    : BaseDB(orm::make_storage(
+          db_path,
+          orm::make_table("bookmarks",
+                          orm::make_column("media_id", &Bookmark::media_id, orm::primary_key()),
+                          orm::make_column("status", &Bookmark::status),
+                          orm::make_column("created_at", &Bookmark::created_at),
+                          orm::make_column("updated_at", &Bookmark::updated_at),
+                          orm::make_column("rewatches", &Bookmark::rewatches))))
 {
-    auto p = storage.get_pointer<Mapping>(shiki_id);
-    if (!p)
-        return std::nullopt;
-    return *p;
-}
-
-void MappingDB::Upsert(const Mapping &m)
-{
-    storage.replace(m);
+    storage.sync_schema();
 }
