@@ -4,11 +4,10 @@ Sync your anime list across platforms. AniLib only for now, Shikimori and the cr
 
 # Status
 
-Work in progress, nothing here is stable yet. What works today:
+Work in progress. What works today:
 
-- Pulls your AniLib catalog into a local sqlite db
-- Parses a Shikimori list export (no sync back yet)
-- Skeleton for cross-platform ID mapping. Cache lookup is wired, the network resolve steps are still stubs.
+* List synchronization shikimori -> anilib 
+
 
 # Build
 
@@ -28,6 +27,7 @@ You can read about anilib token and hosturl [here](docs/anilibtoken.md).
 [anilib]
 api_token = "..."
 host_url = "" #anilib host url
+user_id = "..."
 
 [shikimori]
 client_id = "..."
@@ -46,9 +46,11 @@ level = "info"
 
 The first run dumps every page of your AniLib catalog into `pages/*.json` and writes `anilib.db`.
 
-# What's next
+# TODO
 
-The mapping resolver. AniLib and Shikimori don't share IDs :( But shikimori share IDs with MAL and anilist :)
+- [✓] The mapping resolver.
+- [x] cli commands
+- [x] flutter ui
 
 # Why
 

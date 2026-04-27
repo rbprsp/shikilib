@@ -9,6 +9,7 @@ struct Config
     {
         std::string api_token;
         std::string host_url;
+        std::string user_id;
     } anilib;
 
     struct Shikimori

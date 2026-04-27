@@ -3,7 +3,9 @@
 [anilib]
 api_token = "your_anilib_token_here"
 host_url = "hapi.hentaicdn.org"
+user_id = "your_user_id"
 
+#future
 [shikimori]
 client_id = "your_shikimori_client_id"
 client_secret = "your_shikimori_client_secret"

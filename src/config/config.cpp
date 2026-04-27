@@ -36,6 +36,11 @@ Config ConfigLoader::Load(const std::string& path)
             {
                 cfg.anilib.host_url = toml::find<std::string>(anilib, "host_url");
             }
+
+            if (anilib.contains("user_id"))
+            {
+                cfg.anilib.user_id = toml::find<std::string>(anilib, "user_id");
+            }
         }
 
         if (data.contains("shikimori"))

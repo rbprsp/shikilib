@@ -68,7 +68,7 @@ struct Status
 
 struct UserBookmarkMeta
 {
-    bool comment{};
+    std::optional<bool> comment;
     std::optional<int> rewatches;
     std::optional<int> item_number;
     std::optional<std::string> player;
@@ -202,12 +202,57 @@ struct Anime
     std::string rus_name;
     std::string eng_name;
     std::string type;
+    std::string model;
     std::string slug;
     std::string slug_url;
     std::optional<int> shiki_id;
     std::optional<std::string> shiki_name;
     std::optional<std::string> shiki_status;
     std::optional<int> shiki_score;
+};
+
+struct BookmarkItem
+{
+    int id{};
+    std::string type;
+    int media_id{};
+    std::optional<int> item_id;
+    std::optional<std::string> progress;
+    int status{};
+    std::string created_at;
+    std::string updated_at;
+    UserBookmarkMeta meta;
+
+    struct glaze
+    {
+        using T = BookmarkItem;
+
+        static constexpr auto value =
+            glz::object("id", &T::id, "type", &T::type, "media_id", &T::media_id, "item_id", &T::item_id, "progress",
+                        &T::progress, "status", &T::status, "created_at", &T::created_at, "updated_at", &T::updated_at,
+                        "meta", &T::meta);
+    };
+};
+
+struct AnilibBookmarksPage
+{
+    std::vector<BookmarkItem> data;
+
+    struct glaze
+    {
+        using T = AnilibBookmarksPage;
+
+        static constexpr auto value = glz::object("data", &T::data);
+    };
+};
+
+struct Bookmark
+{
+    int media_id{};
+    int status{};
+    std::string created_at;
+    std::string updated_at;
+    std::optional<int> rewatches;
 };
 
 #endif

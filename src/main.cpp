@@ -1,15 +1,15 @@
 #include "anilib/auth/auth.h"
 #include "anilib/catalog/catalog.h"
+#include "anilib/sync/sync.h"
 #include "config/config.h"
 #include "db/db.h"
-#include "mapping/resolver.h"
-#include "models/shiki.h"
+#include "mapping/diff.h"
+#include "shiki/list/shiki_list.h"
 
 #include <spdlog/common.h>
 #include <spdlog/spdlog.h>
 
 #include <string>
-#include <vector>
 
 int main(int argc, char* argv[])
 {
@@ -32,15 +32,24 @@ int main(int argc, char* argv[])
     else
         spdlog::set_level(spdlog::level::debug);
 
-    AnilibClient client(config.anilib.api_token, config.anilib.host_url);
+    AnilibClient client(config.anilib.api_token, config.anilib.host_url, config.anilib.user_id);
+
+    AnilibBookmarks ab(client);
+    ab.DumpBookmarks();
+
     Catalog c(client);
     c.SyncPages();
 
-    MappingDB mapping_db("mapping.db");
-    MappingResolver resolver(mapping_db);
+    ShikiData sd;
+    sd.CreateDB();
 
-    std::vector<ShikiList> shiki_entries; // TODO: load from ShikiDB
-    resolver.ResolveAll(shiki_entries);
+    ShikiDB  shiki("shiki.db");
+    MappingDB map("mapping.db");
+    BookmarkDB bmdb("bookmarks.db");
+    AnilibDB anilibdb("anilib.db");
+
+    BookmarkDiff bmd = ComputeBookmarkDiff(shiki, map, bmdb, anilibdb);
+    ab.Sync(bmd, false);
 
     return 0;
 }
