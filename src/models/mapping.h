@@ -10,9 +10,6 @@ struct Mapping
     std::optional<int> anilib_id;
     std::optional<int> anilist_id;
     std::string name;
-    float confidence{0};
-    bool verified{false};
-    std::string created_at;
 };
 
 #endif

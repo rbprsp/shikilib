@@ -2,43 +2,37 @@
 #define MAPPING_RESOLVER_H
 
 #include "db/db.h"
-#include "models/mapping.h"
-#include "models/shiki.h"
 
-#include <atomic>
-#include <functional>
-#include <optional>
+#include <string>
+#include <string_view>
 #include <unordered_map>
 #include <vector>
-
-struct ResolveProgress
-{
-    std::atomic<int> done{0};
-    std::atomic<int> total{0};
-    std::atomic<int> resolved{0};
-    std::atomic<int> failed{0};
-    std::atomic<bool> cancel{false};
-};
 
 class MappingResolver
 {
 public:
-    explicit MappingResolver(MappingDB &db);
+    struct Outcome
+    {
+        int matched{0};
+        int ambiguous{0};
+        int missed{0};
+        int cached{0};
+        std::vector<ShikiList> missed_entries;
+        std::vector<ShikiList> ambiguous_entries;
+    };
 
-    void ResolveAll(const std::vector<ShikiList> &entries,
-                    const std::function<void(const ResolveProgress &)> &on_tick = {});
+    MappingResolver(MappingDB &mapping_db, AnilibDB &anilib_db);
 
-    std::optional<Mapping> ResolveOne(const ShikiList &entry);
+    Outcome ResolveByName(ShikiDB &shiki_db);
+
+    static std::string NormalizeName(std::string_view name);
 
 private:
-    MappingDB &db;
-    ResolveProgress progress;
+    MappingDB &mapping_db;
+    std::unordered_map<std::string, std::vector<int>> name_index;
 
-    std::vector<ShikiList> FilterCacheMisses(const std::vector<ShikiList> &entries);
-    std::unordered_map<int, int> ResolveBatchAniList(const std::vector<int> &mal_ids);
-    std::optional<int> ResolveAnilibByAnilistId(int anilist_id);
-    std::optional<int> ResolveAnilibByTitle(const ShikiList &entry);
-    void Persist(const Mapping &m);
+    void BuildIndex(AnilibDB &anilib_db);
+    std::vector<int> Lookup(const ShikiList &entry) const;
 };
 
 #endif
